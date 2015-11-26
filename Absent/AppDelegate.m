@@ -7,13 +7,15 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "LoginVC.h"
+#import "MainNavC.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) ViewController *loginVC;
+@property (nonatomic, strong) LoginVC *loginVC;
+@property (nonatomic, strong) MainNavC *mainHall;
 
 @end
 
@@ -21,18 +23,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
-    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    self.loginVC = [[ViewController alloc]init];
-    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:self.loginVC];
-    self.window.rootViewController = navController;
-    [self.window addSubview:navController.view];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.loginVC = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:nil];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:self.loginVC];
+    self.navController.navigationBarHidden = YES;
+    [self.window setRootViewController: self.navController];
+    
     [self.window makeKeyAndVisible];
-    return YES;
+    
+    return [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
     return [[FBSDKApplicationDelegate sharedInstance]application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
