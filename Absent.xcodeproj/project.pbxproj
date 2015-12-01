@@ -17,6 +17,7 @@
 		2D539AB11C06AD81000F472F /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AAD1C06AD81000F472F /* Run.m */; settings = {ASSET_TAGS = (); }; };
 		2D539AB61C06BA81000F472F /* MathCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AB51C06BA81000F472F /* MathCalculation.m */; settings = {ASSET_TAGS = (); }; };
 		2D539AB91C06C055000F472F /* MulticolorPolylineRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */; settings = {ASSET_TAGS = (); }; };
+		2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		2DFDA1821BF07438006D938B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1811BF07438006D938B /* main.m */; };
 		2DFDA1851BF07438006D938B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1841BF07438006D938B /* AppDelegate.m */; };
 		2DFDA18D1BF07438006D938B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDA18C1BF07438006D938B /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		2D539AB51C06BA81000F472F /* MathCalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathCalculation.m; sourceTree = "<group>"; };
 		2D539AB71C06C055000F472F /* MulticolorPolylineRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineRoute.h; sourceTree = "<group>"; };
 		2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineRoute.m; sourceTree = "<group>"; };
+		2D539ABB1C07114D000F472F /* PedometerCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PedometerCoreData.xcdatamodel; sourceTree = "<group>"; };
 		2DFDA17D1BF07438006D938B /* Absent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Absent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFDA1811BF07438006D938B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DFDA1831BF07438006D938B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				2D539AAB1C06AD81000F472F /* Run+CoreDataProperties.m */,
 				2D539AAC1C06AD81000F472F /* Run.h */,
 				2D539AAD1C06AD81000F472F /* Run.m */,
+				2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */,
 			);
 			name = PedoData;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				2D539AB11C06AD81000F472F /* Run.m in Sources */,
 				2D539AA51C06ACD8000F472F /* PedoAttributes.xcdatamodeld in Sources */,
 				2DFDA1821BF07438006D938B /* main.m in Sources */,
+				2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +741,16 @@
 			);
 			currentVersion = 2D539AA41C06ACD8000F472F /* PedoAttributes.xcdatamodel */;
 			path = PedoAttributes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2D539ABB1C07114D000F472F /* PedometerCoreData.xcdatamodel */,
+			);
+			currentVersion = 2D539ABB1C07114D000F472F /* PedometerCoreData.xcdatamodel */;
+			path = PedometerCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

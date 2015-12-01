@@ -18,4 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeDurationLbl;
 @property (weak, nonatomic) IBOutlet UILabel *paceLbl;
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @end

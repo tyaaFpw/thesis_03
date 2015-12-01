@@ -7,7 +7,7 @@
 //
 
 #import "MathCalculation.h"
-#import "Locations.h"
+#import "Locations+CoreDataProperties.h"
 #import "MulticolorPolylineRoute.h"
 
 static BOOL const isMetric = YES;
