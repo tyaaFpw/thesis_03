@@ -60,11 +60,11 @@
                         </mask>
                     </variation>
                 </imageView>
-                <navigationBar contentMode="scaleToFill" backIndicatorImage="123B306B-1CBE-4D6D-BE60-A7920D657EA2" translatesAutoresizingMaskIntoConstraints="NO" id="Byn-dY-Qu0">
+                <navigationBar contentMode="scaleToFill" backIndicatorImage="8490723C-B0CD-43D7-A6CB-1B0F3F5EBA5B" translatesAutoresizingMaskIntoConstraints="NO" id="Byn-dY-Qu0">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <items>
                         <navigationItem title="Main Hall" id="0QJ-le-hlk">
-                            <barButtonItem key="leftBarButtonItem" tag="1" image="back.png" style="plain" id="BvM-cw-Joc">
+                            <barButtonItem key="leftBarButtonItem" tag="1" image="back.png" id="BvM-cw-Joc">
                                 <connections>
                                     <action selector="backButtonTapped:" destination="-1" id="AZ2-jG-0Hl"/>
                                 </connections>
@@ -194,7 +194,7 @@
         </view>
     </objects>
     <resources>
-        <image name="123B306B-1CBE-4D6D-BE60-A7920D657EA2" width="36" height="36">
+        <image name="8490723C-B0CD-43D7-A6CB-1B0F3F5EBA5B" width="36" height="36">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

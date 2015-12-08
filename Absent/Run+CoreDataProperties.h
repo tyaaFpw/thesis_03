@@ -11,6 +11,8 @@
 
 #import "Run.h"
 
+@class Locations;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Run (CoreDataProperties)
@@ -19,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *duration;
 @property (nullable, nonatomic, retain) NSNumber *distance;
 @property (nullable, nonatomic, retain) Locations *locations;
+@property (nonatomic, retain) NSOrderedSet *locationOrderedSet;
+
+
 
 @end
 

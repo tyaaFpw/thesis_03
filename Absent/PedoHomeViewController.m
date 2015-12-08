@@ -63,8 +63,14 @@
         [locationArray addObject:objectLocation];
     }
     
-    newRun.locations = [NSOrderedSet orderedSetWithArray:locationArray];
+    newRun.locationOrderedSet = [NSOrderedSet orderedSetWithArray:locationArray];
     self.run = newRun;
+    
+    NSError *error = nil;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 }
 
 - (void)eachSecond {
@@ -134,6 +140,10 @@
     }
     
     return nil;
+}
+
+- (IBAction)backToMainHall:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad {

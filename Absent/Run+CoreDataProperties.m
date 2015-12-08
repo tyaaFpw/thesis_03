@@ -10,6 +10,7 @@
 //
 
 #import "Run+CoreDataProperties.h"
+#import "Locations.h"
 
 @implementation Run (CoreDataProperties)
 
@@ -17,5 +18,6 @@
 @dynamic duration;
 @dynamic distance;
 @dynamic locations;
+@dynamic locationOrderedSet;
 
 @end

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeartCameraScreen">
+            <connections>
+                <outlet property="cameraScreen" destination="SLI-Gu-BrH" id="DdW-Wz-dMr"/>
+                <outlet property="cancelBtn" destination="QGv-cU-SOc" id="LRG-wx-XuI"/>
+                <outlet property="heartRateLabel" destination="Fpc-c7-7Jx" id="JzV-if-MrB"/>
+                <outlet property="saveBtn" destination="UL8-jt-GiN" id="73E-6G-OBq"/>
+                <outlet property="timeCounterLabel" destination="EuJ-cF-lOk" id="oax-wr-y1K"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SLI-Gu-BrH">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heartRate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-c7-7Jx">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UL8-jt-GiN">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="savingTheProgress:" destination="-1" eventType="touchUpInside" id="hBs-1h-gvA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGv-cU-SOc">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelingTheOperation:" destination="-1" eventType="touchUpInside" id="baC-Kg-5xJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countingTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-cF-lOk">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QGv-cU-SOc" firstAttribute="leading" secondItem="UL8-jt-GiN" secondAttribute="trailing" constant="16" id="3eq-ea-owV"/>
+                <constraint firstItem="Fpc-c7-7Jx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="162" id="D3j-jV-Wbi"/>
+                <constraint firstAttribute="bottom" secondItem="EuJ-cF-lOk" secondAttribute="bottom" constant="8" id="MWW-6l-dll"/>
+                <constraint firstItem="Fpc-c7-7Jx" firstAttribute="top" secondItem="SLI-Gu-BrH" secondAttribute="bottom" constant="24" id="MY2-x1-eZz"/>
+                <constraint firstAttribute="bottom" secondItem="UL8-jt-GiN" secondAttribute="bottom" constant="3" id="OLZ-ug-dI0"/>
+                <constraint firstAttribute="trailing" secondItem="SLI-Gu-BrH" secondAttribute="trailing" constant="8" id="RQk-2K-Vz9">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="SLI-Gu-BrH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Ydk-Qx-CWs">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="EuJ-cF-lOk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ZSg-ht-al3"/>
+                <constraint firstItem="SLI-Gu-BrH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="m33-rI-wcl">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="QGv-cU-SOc" secondAttribute="bottom" constant="3" id="o3y-Nt-dD0"/>
+                <constraint firstAttribute="trailing" secondItem="QGv-cU-SOc" secondAttribute="trailing" constant="8" id="sUM-w0-3mi"/>
+                <constraint firstItem="EuJ-cF-lOk" firstAttribute="top" secondItem="Fpc-c7-7Jx" secondAttribute="bottom" constant="18" id="xH1-Lr-Ohf"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="SLI-Gu-BrH"/>
+                    <exclude reference="Fpc-c7-7Jx"/>
+                    <exclude reference="UL8-jt-GiN"/>
+                    <exclude reference="QGv-cU-SOc"/>
+                    <exclude reference="EuJ-cF-lOk"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="RQk-2K-Vz9"/>
+                    <exclude reference="Ydk-Qx-CWs"/>
+                    <exclude reference="m33-rI-wcl"/>
+                    <exclude reference="D3j-jV-Wbi"/>
+                    <exclude reference="MY2-x1-eZz"/>
+                    <exclude reference="MWW-6l-dll"/>
+                    <exclude reference="ZSg-ht-al3"/>
+                    <exclude reference="xH1-Lr-Ohf"/>
+                    <exclude reference="OLZ-ug-dI0"/>
+                    <exclude reference="3eq-ea-owV"/>
+                    <exclude reference="o3y-Nt-dD0"/>
+                    <exclude reference="sUM-w0-3mi"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="SLI-Gu-BrH"/>
+                    <include reference="Fpc-c7-7Jx"/>
+                    <include reference="UL8-jt-GiN"/>
+                    <include reference="QGv-cU-SOc"/>
+                    <include reference="EuJ-cF-lOk"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="RQk-2K-Vz9"/>
+                    <include reference="Ydk-Qx-CWs"/>
+                    <include reference="m33-rI-wcl"/>
+                    <include reference="D3j-jV-Wbi"/>
+                    <include reference="MY2-x1-eZz"/>
+                    <include reference="MWW-6l-dll"/>
+                    <include reference="ZSg-ht-al3"/>
+                    <include reference="xH1-Lr-Ohf"/>
+                    <include reference="OLZ-ug-dI0"/>
+                    <include reference="3eq-ea-owV"/>
+                    <include reference="o3y-Nt-dD0"/>
+                    <include reference="sUM-w0-3mi"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="490" y="448"/>
+        </view>
+    </objects>
+</document>

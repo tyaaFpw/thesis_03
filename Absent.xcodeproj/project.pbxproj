@@ -18,6 +18,11 @@
 		2D539AB61C06BA81000F472F /* MathCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AB51C06BA81000F472F /* MathCalculation.m */; settings = {ASSET_TAGS = (); }; };
 		2D539AB91C06C055000F472F /* MulticolorPolylineRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */; settings = {ASSET_TAGS = (); }; };
 		2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		2DAEE61A1C1688B000D863F6 /* HeartCounterMainHall.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAEE6181C1688B000D863F6 /* HeartCounterMainHall.m */; settings = {ASSET_TAGS = (); }; };
+		2DAEE61B1C1688B000D863F6 /* HeartCounterMainHall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEE6191C1688B000D863F6 /* HeartCounterMainHall.xib */; settings = {ASSET_TAGS = (); }; };
+		2DAEE61E1C16A65F00D863F6 /* HeartRateObjModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAEE61D1C16A65F00D863F6 /* HeartRateObjModel.m */; settings = {ASSET_TAGS = (); }; };
+		2DAEE6221C16CB9400D863F6 /* HeartCameraScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */; settings = {ASSET_TAGS = (); }; };
+		2DAEE6231C16CB9400D863F6 /* HeartCameraScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */; settings = {ASSET_TAGS = (); }; };
 		2DFDA1821BF07438006D938B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1811BF07438006D938B /* main.m */; };
 		2DFDA1851BF07438006D938B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1841BF07438006D938B /* AppDelegate.m */; };
 		2DFDA18D1BF07438006D938B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDA18C1BF07438006D938B /* Assets.xcassets */; };
@@ -71,6 +76,14 @@
 		2D539AB71C06C055000F472F /* MulticolorPolylineRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineRoute.h; sourceTree = "<group>"; };
 		2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineRoute.m; sourceTree = "<group>"; };
 		2D539ABB1C07114D000F472F /* PedometerCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PedometerCoreData.xcdatamodel; sourceTree = "<group>"; };
+		2DAEE6171C1688B000D863F6 /* HeartCounterMainHall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartCounterMainHall.h; sourceTree = "<group>"; };
+		2DAEE6181C1688B000D863F6 /* HeartCounterMainHall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartCounterMainHall.m; sourceTree = "<group>"; };
+		2DAEE6191C1688B000D863F6 /* HeartCounterMainHall.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeartCounterMainHall.xib; sourceTree = "<group>"; };
+		2DAEE61C1C16A65F00D863F6 /* HeartRateObjModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRateObjModel.h; sourceTree = "<group>"; };
+		2DAEE61D1C16A65F00D863F6 /* HeartRateObjModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRateObjModel.m; sourceTree = "<group>"; };
+		2DAEE61F1C16CB9400D863F6 /* HeartCameraScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartCameraScreen.h; sourceTree = "<group>"; };
+		2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartCameraScreen.m; sourceTree = "<group>"; };
+		2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeartCameraScreen.xib; sourceTree = "<group>"; };
 		2DFDA17D1BF07438006D938B /* Absent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Absent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFDA1811BF07438006D938B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DFDA1831BF07438006D938B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +143,7 @@
 		2D539A9F1C06AA94000F472F /* Pedometer */ = {
 			isa = PBXGroup;
 			children = (
+				2D539AB31C06BA49000F472F /* Calculation */,
 				2D539A9A1C06AA77000F472F /* PedoHomeViewController.h */,
 				2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */,
 				2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */,
@@ -140,6 +154,14 @@
 		2D539AA01C06AAA7000F472F /* HeartRate */ = {
 			isa = PBXGroup;
 			children = (
+				2DAEE6171C1688B000D863F6 /* HeartCounterMainHall.h */,
+				2DAEE6181C1688B000D863F6 /* HeartCounterMainHall.m */,
+				2DAEE6191C1688B000D863F6 /* HeartCounterMainHall.xib */,
+				2DAEE61C1C16A65F00D863F6 /* HeartRateObjModel.h */,
+				2DAEE61D1C16A65F00D863F6 /* HeartRateObjModel.m */,
+				2DAEE61F1C16CB9400D863F6 /* HeartCameraScreen.h */,
+				2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */,
+				2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */,
 			);
 			name = HeartRate;
 			sourceTree = "<group>";
@@ -212,7 +234,6 @@
 		2DFDA17F1BF07438006D938B /* Absent */ = {
 			isa = PBXGroup;
 			children = (
-				2D539AB31C06BA49000F472F /* Calculation */,
 				2D539AA21C06AC83000F472F /* CoreData */,
 				2D539AA11C06AAB6000F472F /* MyHistory */,
 				2D539AA01C06AAA7000F472F /* HeartRate */,
@@ -413,7 +434,9 @@
 				2DFDA1D91BF1F2B2006D938B /* logout.png in Resources */,
 				2DFDA1C11BF1D5E7006D938B /* LoginVC.xib in Resources */,
 				2D539A9E1C06AA77000F472F /* PedoHomeViewController.xib in Resources */,
+				2DAEE6231C16CB9400D863F6 /* HeartCameraScreen.xib in Resources */,
 				2DFDA18D1BF07438006D938B /* Assets.xcassets in Resources */,
+				2DAEE61B1C1688B000D863F6 /* HeartCounterMainHall.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,9 +504,12 @@
 				2DFDA1CC1BF1E807006D938B /* MainNavC.m in Sources */,
 				2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */,
 				2D539AB11C06AD81000F472F /* Run.m in Sources */,
+				2DAEE61E1C16A65F00D863F6 /* HeartRateObjModel.m in Sources */,
+				2DAEE6221C16CB9400D863F6 /* HeartCameraScreen.m in Sources */,
 				2D539AA51C06ACD8000F472F /* PedoAttributes.xcdatamodeld in Sources */,
 				2DFDA1821BF07438006D938B /* main.m in Sources */,
 				2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */,
+				2DAEE61A1C1688B000D863F6 /* HeartCounterMainHall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
