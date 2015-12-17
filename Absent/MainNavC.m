@@ -10,6 +10,7 @@
 #import "LoginVC.h"
 #import "PedoHomeViewController.h"
 #import "HeartCameraScreen.h"
+#import "TestViewController.h"
 
 @interface MainNavC ()
 
@@ -17,6 +18,7 @@
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) PedoHomeViewController *pedometerVC;
 @property (nonatomic, strong) HeartCameraScreen *heartScreen;
+@property (nonatomic, strong) TestViewController *testVC;
 
 @end
 
@@ -68,8 +70,11 @@
 }
 
 - (IBAction)goingToHeartRateMenu:(id)sender {
-    self.heartScreen = [[HeartCameraScreen alloc]initWithNibName:@"HeartCameraScreen" bundle:nil];
-    [self presentViewController:self.heartScreen animated:YES completion:nil];
+//    self.heartScreen = [[HeartCameraScreen alloc]initWithNibName:@"HeartCameraScreen" bundle:nil];
+//    [self presentViewController:self.heartScreen animated:YES completion:nil];
+    
+    self.testVC = [[TestViewController alloc]initWithNibName:@"TestViewController" bundle:nil];
+    [self presentViewController:self.testVC animated:YES completion:nil];
 }
 
 - (IBAction)goingToMyHistoryMenu:(id)sender {

@@ -1,16 +1,17 @@
 //
-//  HeartCameraScreen.m
+//  TestViewController.m
 //  Absent
 //
-//  Created by Gratia on 12/8/15.
+//  Created by Gratia on 12/17/15.
 //  Copyright © 2015 Gratia. All rights reserved.
 //
 
-#import "HeartCameraScreen.h"
+#import "TestViewController.h"
 #import "PulseDetector.h"
 #import "Filter.h"
 #import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
 
 typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     STATE_PAUSED,
@@ -19,7 +20,7 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
 
 #define MIN_FRAMES_FOR_FILTER_TO_SETTLE 10
 
-@interface HeartCameraScreen () <AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface TestViewController () <AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (nonatomic, strong) AVCaptureDevice *camera;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
@@ -30,7 +31,7 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
 
 @end
 
-@implementation HeartCameraScreen
+@implementation TestViewController
 {
     BOOL TimerBool;
     NSTimer *timer;
@@ -40,19 +41,8 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
     [self settingUpDetectionModel];
-}
-
--(void) viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
-    [self resume];
-}
-
--(void) viewWillDisappear:(BOOL)animated {
-    
-    [super viewWillDisappear:animated];
-    [self pause];
 }
 
 - (void)settingUpDetectionModel {
@@ -60,7 +50,12 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     self.pulseDetector = [[PulseDetector alloc]init];
 }
 
-- (IBAction)startBtnPressed:(id)sender {
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)startTheOperation:(id)sender {
     if ([_startBtn.currentTitle isEqualToString:@"Start"]) {
         
         [_startBtn setTitle:@"Stop" forState:UIControlStateNormal];
@@ -71,7 +66,7 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
         [_startBtn setTitle:@"Start" forState:UIControlStateNormal];
         [timer invalidate];
         [self stopCameraCapture];
-        self.detectInfoBtn.text=@"Please start reading";
+        self.detectInfoLbl.text=@"Please start reading";
     }
 }
 
@@ -79,12 +74,10 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
 -(void) startCameraCapture {
     
     //    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(BlinkingMethod) userInfo:nil repeats:YES];
-    
     timer = [NSTimer scheduledTimerWithTimeInterval: 0.5
                                              target: self
                                            selector:@selector(BlinkingMethod)
                                            userInfo: nil repeats:YES];
-    
     
     // Create the AVCapture Session
     self.captureSession = [[AVCaptureSession alloc] init];
@@ -108,8 +101,7 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     }
     
     // Set the output
-    AVCaptureVideoDataOutput* videoOutput = [
-                                             [AVCaptureVideoDataOutput alloc] init];
+    AVCaptureVideoDataOutput* videoOutput = [[AVCaptureVideoDataOutput alloc] init];
     
     // create a queue to run the capture on
     dispatch_queue_t captureQueue= dispatch_queue_create("captureQueue", NULL);
@@ -121,7 +113,9 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     videoOutput.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA], (id)kCVPixelBufferPixelFormatTypeKey, nil];
     
     // set the minimum acceptable frame rate to 10 fps
-    videoOutput.minFrameDuration=CMTimeMake(1, 10);
+    [self.camera setActiveVideoMinFrameDuration:CMTimeMake(1, 10)];
+    [self.camera setActiveVideoMaxFrameDuration:CMTimeMake(1, 10)];
+//    videoOutput.minFrameDuration=CMTimeMake(1, 10);
     
     // and the size of the frames we want - we'll use the smallest frame size available
     [self.captureSession setSessionPreset:AVCaptureSessionPresetLow];
@@ -149,71 +143,36 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     self.captureSession = nil;
 }
 
-#pragma mark Pause and Resume of pulse detection
--(void) pause {
-    
-    if(self.currentState == STATE_PAUSED) return;
-    
-    // switch off the torch
-    if([self.camera isTorchModeSupported:AVCaptureTorchModeOn]) {
-        [self.camera lockForConfiguration:nil];
-        self.camera.torchMode = AVCaptureTorchModeOff;
-        [self.camera unlockForConfiguration];
-    }
-    self.currentState=STATE_PAUSED;
-    // let the application go to sleep if the phone is idle
-    [UIApplication sharedApplication].idleTimerDisabled = NO;
-}
-
--(void) resume {
-    
-    if(self.currentState != STATE_PAUSED) return;
-    
-    // switch on the torch
-    if([self.camera isTorchModeSupported:AVCaptureTorchModeOn]) {
-        [self.camera lockForConfiguration:nil];
-        [self.camera unlockForConfiguration];
-    }
-    self.currentState = STATE_SAMPLING;
-    // stop the app from sleeping
-    [UIApplication sharedApplication].idleTimerDisabled = YES;
-}
-
 // r,g,b values are from 0 to 1 // h = [0,360], s = [0,1], v = [0,1]
 //	if s == 0, then h = -1 (undefined)
-//void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v ) {
-//    
-//    float min, max, delta;
-//    min = MIN( r, MIN(g, b ));
-//    max = MAX( r, MAX(g, b ));
-//    *v = max;
-//    delta = max - min;
-//    if( max != 0 )
-//        *s = delta / max;
-//    else {
-//        // r = g = b = 0
-//        *s = 0;
-//        *h = -1;
-//        return;
-//    }
-//    if( r == max )
-//        *h = ( g - b ) / delta;
-//    else if( g == max )
-//        *h=2+(b-r)/delta;
-//    else
-//        *h=4+(r-g)/delta;
-//    *h *= 60;
-//    if( *h < 0 )
-//        *h += 360;
-//    
-//}
+void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v ) {
+    
+    float min, max, delta;
+    min = MIN( r, MIN(g, b ));
+    max = MAX( r, MAX(g, b ));
+    *v = max;
+    delta = max - min;
+    if( max != 0 )
+        *s = delta / max;
+    else {
+        // r = g = b = 0
+        *s = 0;
+        *h = -1;
+        return;
+    }
+    if( r == max )
+        *h = ( g - b ) / delta;
+    else if( g == max )
+        *h=2+(b-r)/delta;
+    else
+        *h=4+(r-g)/delta;
+    *h *= 60;
+    if( *h < 0 )
+        *h += 360;
+    
+}
 
-
-// process the frame of video
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    
-    
-    
     // if we're paused don't do anything
     if(self.currentState==STATE_PAUSED) {
         // reset our frame counter
@@ -248,12 +207,12 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     
     // convert from rgb to hsv colourspace
     float h,s,v;
-//    RGBtoHSV(r, g, b, &h, &s, &v);
+    RGBtoHSV(r, g, b, &h, &s, &v);
     // do a sanity check to see if a finger is placed over the camera
     if(s>0.5 && v>0.5) {
         
         
-        NSLog(@"RatePulse: %@",self.detectInfoBtn.text);
+        NSLog(@"RatePulse: %@",self.detectInfoLbl.text);
         
         // increment the valid frame count
         self.validFrameCounter++;
@@ -279,35 +238,34 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
         // clear the pulse detector - we only really need to do this once, just before we start adding valid samples
         [self.pulseDetector reset];
     }
-    
 }
 
 -(void)BlinkingMethod{
     
-    if (!TimerBool) { [_pictImgView setImage:[UIImage imageNamed:@"Black1_heart.png"]];
-        self.detectInfoBtn.text=@"PLACE FINGER ON CAMERA LENS";
+    if (!TimerBool) { [_infoImgView setImage:[UIImage imageNamed:@"Black1_heart.png"]];
+        self.detectInfoLbl.text=@"PLACE FINGER ON CAMERA LENS";
         return; }
     
-    if ([self.detectInfoBtn.text isEqualToString:@"DETECTING PULSE ...         "]||[self.detectInfoBtn.text isEqualToString:@"PLACE FINGER ON CAMERA LENS"]) {
-        self.detectInfoBtn.text=@"DETECTING PULSE ...         ";
+    if ([self.detectInfoLbl.text isEqualToString:@"DETECTING PULSE ...         "]||[self.detectInfoLbl.text isEqualToString:@"PLACE FINGER ON CAMERA LENS"]) {
+        self.detectInfoLbl.text=@"DETECTING PULSE ...         ";
     }
     
     
     
     UIImage *picture = [UIImage imageNamed:@"Black1_heart.png"];
     
-    if ([_pictImgView.image isEqual:picture] ) {
+    if ([_infoImgView.image isEqual:picture] ) {
         
-        [_pictImgView setImage:[UIImage imageNamed:@"Red_heart.png"]];
+        [_infoImgView setImage:[UIImage imageNamed:@"Red_heart.png"]];
     }else{
         
-        [_pictImgView setImage:[UIImage imageNamed:@"Black1_heart.png"]];
+        [_infoImgView setImage:[UIImage imageNamed:@"Black1_heart.png"]];
     }
 }
 
 -(void) update {
     
-    self.frameValLbl.text = [NSString stringWithFormat:@"Captured Frames: %d%%", MIN(100, (100 * self.validFrameCounter)/MIN_FRAMES_FOR_FILTER_TO_SETTLE)];
+    self.rateValLbl.text = [NSString stringWithFormat:@"Captured Frames: %d%%", MIN(100, (100 * self.validFrameCounter)/MIN_FRAMES_FOR_FILTER_TO_SETTLE)];
     
     
     
@@ -325,10 +283,10 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
         // got a value so show it
         
         float pulse=60.0/avePeriod;
-        self.detectInfoBtn.text=[NSString stringWithFormat:@"%0.0f", pulse];
+        self.detectInfoLbl.text=[NSString stringWithFormat:@"%0.0f", pulse];
         
         if (!PubNubBool) {
-            [self result:self.detectInfoBtn.text];
+            [self result:self.detectInfoLbl.text];
         }
     }
 }
@@ -347,20 +305,17 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)savingTheOperation:(id)sender {
 }
 
-- (IBAction)savingTheProgress:(id)sender {
+- (IBAction)cancellingTheOperation:(id)sender {
 }
 
-- (IBAction)cancelingTheOperation:(id)sender {
-    [_startBtn setTitle:@"Start" forState:UIControlStateNormal];
-    [timer invalidate];
-    [self stopCameraCapture];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)backToPreviousPage:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"TEST");
+    }];
 }
+
 
 @end

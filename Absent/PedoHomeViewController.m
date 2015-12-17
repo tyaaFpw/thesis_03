@@ -42,8 +42,6 @@
     self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
     self.distance = 0;
     self.locationsMutable = [NSMutableArray array];
-    
-    
 }
 
 - (void)saveRunProgress {

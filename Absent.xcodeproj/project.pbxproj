@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0B9503FA0923CC450CDA9207 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F15C6503BFBA94B665546CE9 /* libPods.a */; };
+		2D15DA671C229EC6009E00E8 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA641C229EC6009E00E8 /* Filter.m */; settings = {ASSET_TAGS = (); }; };
+		2D15DA681C229EC6009E00E8 /* PulseDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA661C229EC6009E00E8 /* PulseDetector.mm */; settings = {ASSET_TAGS = (); }; };
+		2D15DA6B1C229EF3009E00E8 /* Black1_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA691C229EF3009E00E8 /* Black1_heart.png */; settings = {ASSET_TAGS = (); }; };
+		2D15DA6C1C229EF3009E00E8 /* Red_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6A1C229EF3009E00E8 /* Red_heart.png */; settings = {ASSET_TAGS = (); }; };
+		2D15DA701C22BE9B009E00E8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2D15DA711C22BE9B009E00E8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2D539A9E1C06AA77000F472F /* PedoHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		2D539AA51C06ACD8000F472F /* PedoAttributes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AA31C06ACD8000F472F /* PedoAttributes.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
@@ -18,9 +24,6 @@
 		2D539AB61C06BA81000F472F /* MathCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AB51C06BA81000F472F /* MathCalculation.m */; settings = {ASSET_TAGS = (); }; };
 		2D539AB91C06C055000F472F /* MulticolorPolylineRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */; settings = {ASSET_TAGS = (); }; };
 		2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		2DAEE61A1C1688B000D863F6 /* HeartCounterMainHall.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAEE6181C1688B000D863F6 /* HeartCounterMainHall.m */; settings = {ASSET_TAGS = (); }; };
-		2DAEE61B1C1688B000D863F6 /* HeartCounterMainHall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEE6191C1688B000D863F6 /* HeartCounterMainHall.xib */; settings = {ASSET_TAGS = (); }; };
-		2DAEE61E1C16A65F00D863F6 /* HeartRateObjModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAEE61D1C16A65F00D863F6 /* HeartRateObjModel.m */; settings = {ASSET_TAGS = (); }; };
 		2DAEE6221C16CB9400D863F6 /* HeartCameraScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */; settings = {ASSET_TAGS = (); }; };
 		2DAEE6231C16CB9400D863F6 /* HeartCameraScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */; settings = {ASSET_TAGS = (); }; };
 		2DFDA1821BF07438006D938B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1811BF07438006D938B /* main.m */; };
@@ -59,6 +62,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D15DA631C229EC6009E00E8 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		2D15DA641C229EC6009E00E8 /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
+		2D15DA651C229EC6009E00E8 /* PulseDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseDetector.h; sourceTree = "<group>"; };
+		2D15DA661C229EC6009E00E8 /* PulseDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PulseDetector.mm; sourceTree = "<group>"; };
+		2D15DA691C229EF3009E00E8 /* Black1_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black1_heart.png; sourceTree = "<group>"; };
+		2D15DA6A1C229EF3009E00E8 /* Red_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red_heart.png; sourceTree = "<group>"; };
+		2D15DA6D1C22BE9B009E00E8 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		2D539A9A1C06AA77000F472F /* PedoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedoHomeViewController.h; sourceTree = "<group>"; };
 		2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedoHomeViewController.m; sourceTree = "<group>"; };
 		2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PedoHomeViewController.xib; sourceTree = "<group>"; };
@@ -76,11 +88,6 @@
 		2D539AB71C06C055000F472F /* MulticolorPolylineRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineRoute.h; sourceTree = "<group>"; };
 		2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineRoute.m; sourceTree = "<group>"; };
 		2D539ABB1C07114D000F472F /* PedometerCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PedometerCoreData.xcdatamodel; sourceTree = "<group>"; };
-		2DAEE6171C1688B000D863F6 /* HeartCounterMainHall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartCounterMainHall.h; sourceTree = "<group>"; };
-		2DAEE6181C1688B000D863F6 /* HeartCounterMainHall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartCounterMainHall.m; sourceTree = "<group>"; };
-		2DAEE6191C1688B000D863F6 /* HeartCounterMainHall.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeartCounterMainHall.xib; sourceTree = "<group>"; };
-		2DAEE61C1C16A65F00D863F6 /* HeartRateObjModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRateObjModel.h; sourceTree = "<group>"; };
-		2DAEE61D1C16A65F00D863F6 /* HeartRateObjModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRateObjModel.m; sourceTree = "<group>"; };
 		2DAEE61F1C16CB9400D863F6 /* HeartCameraScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartCameraScreen.h; sourceTree = "<group>"; };
 		2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartCameraScreen.m; sourceTree = "<group>"; };
 		2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeartCameraScreen.xib; sourceTree = "<group>"; };
@@ -154,14 +161,16 @@
 		2D539AA01C06AAA7000F472F /* HeartRate */ = {
 			isa = PBXGroup;
 			children = (
-				2DAEE6171C1688B000D863F6 /* HeartCounterMainHall.h */,
-				2DAEE6181C1688B000D863F6 /* HeartCounterMainHall.m */,
-				2DAEE6191C1688B000D863F6 /* HeartCounterMainHall.xib */,
-				2DAEE61C1C16A65F00D863F6 /* HeartRateObjModel.h */,
-				2DAEE61D1C16A65F00D863F6 /* HeartRateObjModel.m */,
+				2D15DA631C229EC6009E00E8 /* Filter.h */,
+				2D15DA641C229EC6009E00E8 /* Filter.m */,
+				2D15DA651C229EC6009E00E8 /* PulseDetector.h */,
+				2D15DA661C229EC6009E00E8 /* PulseDetector.mm */,
 				2DAEE61F1C16CB9400D863F6 /* HeartCameraScreen.h */,
 				2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */,
 				2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */,
+				2D15DA6D1C22BE9B009E00E8 /* TestViewController.h */,
+				2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */,
+				2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */,
 			);
 			name = HeartRate;
 			sourceTree = "<group>";
@@ -281,6 +290,8 @@
 		2DFDA1C71BF1D636006D938B /* ImgResources */ = {
 			isa = PBXGroup;
 			children = (
+				2D15DA691C229EF3009E00E8 /* Black1_heart.png */,
+				2D15DA6A1C229EF3009E00E8 /* Red_heart.png */,
 				2DFDA1D61BF1F2B2006D938B /* back.png */,
 				2DFDA1D71BF1F2B2006D938B /* logout.png */,
 				2DFDA1CE1BF1ECE9006D938B /* connected.png */,
@@ -331,6 +342,7 @@
 				2DFDA17A1BF07438006D938B /* Frameworks */,
 				2DFDA17B1BF07438006D938B /* Resources */,
 				8BF304DB2D16F62D76E9E1E1 /* Copy Pods Resources */,
+				67E74C8115684D9A0770C8BE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -425,9 +437,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DFDA1CF1BF1ECE9006D938B /* connected.png in Resources */,
+				2D15DA711C22BE9B009E00E8 /* TestViewController.xib in Resources */,
 				2DFDA1D11BF1ECF3006D938B /* no_wifi.png in Resources */,
 				2DFDA1D81BF1F2B2006D938B /* back.png in Resources */,
 				2DFDA1901BF07438006D938B /* LaunchScreen.storyboard in Resources */,
+				2D15DA6B1C229EF3009E00E8 /* Black1_heart.png in Resources */,
+				2D15DA6C1C229EF3009E00E8 /* Red_heart.png in Resources */,
 				2DFDA1C51BF1D61A006D938B /* gmail.png in Resources */,
 				2DFDA1CD1BF1E807006D938B /* MainNavC.xib in Resources */,
 				2DFDA1C41BF1D61A006D938B /* facebook.png in Resources */,
@@ -436,7 +451,6 @@
 				2D539A9E1C06AA77000F472F /* PedoHomeViewController.xib in Resources */,
 				2DAEE6231C16CB9400D863F6 /* HeartCameraScreen.xib in Resources */,
 				2DFDA18D1BF07438006D938B /* Assets.xcassets in Resources */,
-				2DAEE61B1C1688B000D863F6 /* HeartCounterMainHall.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +486,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		67E74C8115684D9A0770C8BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8BF304DB2D16F62D76E9E1E1 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,16 +529,17 @@
 				2D539AB01C06AD81000F472F /* Run+CoreDataProperties.m in Sources */,
 				2D539AAE1C06AD81000F472F /* Locations+CoreDataProperties.m in Sources */,
 				2D539AB91C06C055000F472F /* MulticolorPolylineRoute.m in Sources */,
+				2D15DA671C229EC6009E00E8 /* Filter.m in Sources */,
 				2D539AB61C06BA81000F472F /* MathCalculation.m in Sources */,
 				2DFDA1CC1BF1E807006D938B /* MainNavC.m in Sources */,
 				2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */,
 				2D539AB11C06AD81000F472F /* Run.m in Sources */,
-				2DAEE61E1C16A65F00D863F6 /* HeartRateObjModel.m in Sources */,
 				2DAEE6221C16CB9400D863F6 /* HeartCameraScreen.m in Sources */,
+				2D15DA701C22BE9B009E00E8 /* TestViewController.m in Sources */,
 				2D539AA51C06ACD8000F472F /* PedoAttributes.xcdatamodeld in Sources */,
 				2DFDA1821BF07438006D938B /* main.m in Sources */,
+				2D15DA681C229EC6009E00E8 /* PulseDetector.mm in Sources */,
 				2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */,
-				2DAEE61A1C1688B000D863F6 /* HeartCounterMainHall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +625,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -631,6 +662,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
