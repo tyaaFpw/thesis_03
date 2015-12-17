@@ -1,5 +1,5 @@
 //
-//  Locations+CoreDataProperties.m
+//  HeartRate+CoreDataProperties.m
 //  Absent
 //
 //  Created by Gratia on 12/17/15.
@@ -9,13 +9,11 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Locations+CoreDataProperties.h"
+#import "HeartRate+CoreDataProperties.h"
 
-@implementation Locations (CoreDataProperties)
+@implementation HeartRate (CoreDataProperties)
 
-@dynamic latitude;
-@dynamic longitude;
-@dynamic timestamp;
-@dynamic running;
+@dynamic heartratevalue;
+@dynamic userRate;
 
 @end

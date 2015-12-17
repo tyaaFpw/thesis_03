@@ -2,7 +2,7 @@
 //  Run+CoreDataProperties.h
 //  Absent
 //
-//  Created by Gratia on 11/26/15.
+//  Created by Gratia on 12/17/15.
 //  Copyright © 2015 Gratia. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -11,19 +11,24 @@
 
 #import "Run.h"
 
-@class Locations;
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Run (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSDate *timestamp;
-@property (nullable, nonatomic, retain) NSNumber *duration;
 @property (nullable, nonatomic, retain) NSNumber *distance;
+@property (nullable, nonatomic, retain) NSNumber *duration;
+@property (nullable, nonatomic, retain) NSDate *timestamp;
 @property (nullable, nonatomic, retain) Locations *locations;
-@property (nonatomic, retain) NSOrderedSet *locationOrderedSet;
+@property (nullable, nonatomic, retain) NSSet<UserFB *> *userRunning;
 
+@end
 
+@interface Run (CoreDataGeneratedAccessors)
+
+- (void)addUserRunningObject:(UserFB *)value;
+- (void)removeUserRunningObject:(UserFB *)value;
+- (void)addUserRunning:(NSSet<UserFB *> *)values;
+- (void)removeUserRunning:(NSSet<UserFB *> *)values;
 
 @end
 

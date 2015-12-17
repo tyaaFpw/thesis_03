@@ -1,5 +1,5 @@
 //
-//  Locations+CoreDataProperties.m
+//  UserFB+CoreDataProperties.m
 //  Absent
 //
 //  Created by Gratia on 12/17/15.
@@ -9,13 +9,13 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Locations+CoreDataProperties.h"
+#import "UserFB+CoreDataProperties.h"
 
-@implementation Locations (CoreDataProperties)
+@implementation UserFB (CoreDataProperties)
 
-@dynamic latitude;
-@dynamic longitude;
-@dynamic timestamp;
-@dynamic running;
+@dynamic name;
+@dynamic token;
+@dynamic heartRating;
+@dynamic pedometering;
 
 @end

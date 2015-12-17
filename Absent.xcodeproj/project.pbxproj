@@ -14,6 +14,10 @@
 		2D15DA6C1C229EF3009E00E8 /* Red_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6A1C229EF3009E00E8 /* Red_heart.png */; settings = {ASSET_TAGS = (); }; };
 		2D15DA701C22BE9B009E00E8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2D15DA711C22BE9B009E00E8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		2D15DA7A1C22CE57009E00E8 /* UserFB+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA731C22CE57009E00E8 /* UserFB+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		2D15DA7B1C22CE57009E00E8 /* UserFB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA751C22CE57009E00E8 /* UserFB.m */; settings = {ASSET_TAGS = (); }; };
+		2D15DA7C1C22CE57009E00E8 /* HeartRate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA771C22CE57009E00E8 /* HeartRate+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		2D15DA7D1C22CE57009E00E8 /* HeartRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA791C22CE57009E00E8 /* HeartRate.m */; settings = {ASSET_TAGS = (); }; };
 		2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2D539A9E1C06AA77000F472F /* PedoHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		2D539AA51C06ACD8000F472F /* PedoAttributes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AA31C06ACD8000F472F /* PedoAttributes.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
@@ -71,6 +75,14 @@
 		2D15DA6D1C22BE9B009E00E8 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		2D15DA721C22CE57009E00E8 /* UserFB+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserFB+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2D15DA731C22CE57009E00E8 /* UserFB+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserFB+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2D15DA741C22CE57009E00E8 /* UserFB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFB.h; sourceTree = "<group>"; };
+		2D15DA751C22CE57009E00E8 /* UserFB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFB.m; sourceTree = "<group>"; };
+		2D15DA761C22CE57009E00E8 /* HeartRate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HeartRate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2D15DA771C22CE57009E00E8 /* HeartRate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HeartRate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2D15DA781C22CE57009E00E8 /* HeartRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRate.h; sourceTree = "<group>"; };
+		2D15DA791C22CE57009E00E8 /* HeartRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRate.m; sourceTree = "<group>"; };
 		2D539A9A1C06AA77000F472F /* PedoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedoHomeViewController.h; sourceTree = "<group>"; };
 		2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedoHomeViewController.m; sourceTree = "<group>"; };
 		2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PedoHomeViewController.xib; sourceTree = "<group>"; };
@@ -202,6 +214,14 @@
 				2D539AAB1C06AD81000F472F /* Run+CoreDataProperties.m */,
 				2D539AAC1C06AD81000F472F /* Run.h */,
 				2D539AAD1C06AD81000F472F /* Run.m */,
+				2D15DA721C22CE57009E00E8 /* UserFB+CoreDataProperties.h */,
+				2D15DA731C22CE57009E00E8 /* UserFB+CoreDataProperties.m */,
+				2D15DA741C22CE57009E00E8 /* UserFB.h */,
+				2D15DA751C22CE57009E00E8 /* UserFB.m */,
+				2D15DA761C22CE57009E00E8 /* HeartRate+CoreDataProperties.h */,
+				2D15DA771C22CE57009E00E8 /* HeartRate+CoreDataProperties.m */,
+				2D15DA781C22CE57009E00E8 /* HeartRate.h */,
+				2D15DA791C22CE57009E00E8 /* HeartRate.m */,
 				2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */,
 			);
 			name = PedoData;
@@ -523,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D15DA7C1C22CE57009E00E8 /* HeartRate+CoreDataProperties.m in Sources */,
 				2DFDA1851BF07438006D938B /* AppDelegate.m in Sources */,
 				2DFDA1C01BF1D5E7006D938B /* LoginVC.m in Sources */,
 				2D539AAF1C06AD81000F472F /* Locations.m in Sources */,
@@ -530,8 +551,10 @@
 				2D539AAE1C06AD81000F472F /* Locations+CoreDataProperties.m in Sources */,
 				2D539AB91C06C055000F472F /* MulticolorPolylineRoute.m in Sources */,
 				2D15DA671C229EC6009E00E8 /* Filter.m in Sources */,
+				2D15DA7B1C22CE57009E00E8 /* UserFB.m in Sources */,
 				2D539AB61C06BA81000F472F /* MathCalculation.m in Sources */,
 				2DFDA1CC1BF1E807006D938B /* MainNavC.m in Sources */,
+				2D15DA7D1C22CE57009E00E8 /* HeartRate.m in Sources */,
 				2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */,
 				2D539AB11C06AD81000F472F /* Run.m in Sources */,
 				2DAEE6221C16CB9400D863F6 /* HeartCameraScreen.m in Sources */,
@@ -539,6 +562,7 @@
 				2D539AA51C06ACD8000F472F /* PedoAttributes.xcdatamodeld in Sources */,
 				2DFDA1821BF07438006D938B /* main.m in Sources */,
 				2D15DA681C229EC6009E00E8 /* PulseDetector.mm in Sources */,
+				2D15DA7A1C22CE57009E00E8 /* UserFB+CoreDataProperties.m in Sources */,
 				2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
