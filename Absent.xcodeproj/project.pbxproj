@@ -14,22 +14,8 @@
 		2D15DA6C1C229EF3009E00E8 /* Red_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6A1C229EF3009E00E8 /* Red_heart.png */; settings = {ASSET_TAGS = (); }; };
 		2D15DA701C22BE9B009E00E8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2D15DA711C22BE9B009E00E8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		2D15DA7A1C22CE57009E00E8 /* UserFB+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA731C22CE57009E00E8 /* UserFB+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		2D15DA7B1C22CE57009E00E8 /* UserFB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA751C22CE57009E00E8 /* UserFB.m */; settings = {ASSET_TAGS = (); }; };
-		2D15DA7C1C22CE57009E00E8 /* HeartRate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA771C22CE57009E00E8 /* HeartRate+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		2D15DA7D1C22CE57009E00E8 /* HeartRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA791C22CE57009E00E8 /* HeartRate.m */; settings = {ASSET_TAGS = (); }; };
 		2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		2D539A9E1C06AA77000F472F /* PedoHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		2D539AA51C06ACD8000F472F /* PedoAttributes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AA31C06ACD8000F472F /* PedoAttributes.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		2D539AAE1C06AD81000F472F /* Locations+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AA71C06AD81000F472F /* Locations+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		2D539AAF1C06AD81000F472F /* Locations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AA91C06AD81000F472F /* Locations.m */; settings = {ASSET_TAGS = (); }; };
-		2D539AB01C06AD81000F472F /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AAB1C06AD81000F472F /* Run+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		2D539AB11C06AD81000F472F /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AAD1C06AD81000F472F /* Run.m */; settings = {ASSET_TAGS = (); }; };
-		2D539AB61C06BA81000F472F /* MathCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AB51C06BA81000F472F /* MathCalculation.m */; settings = {ASSET_TAGS = (); }; };
-		2D539AB91C06C055000F472F /* MulticolorPolylineRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */; settings = {ASSET_TAGS = (); }; };
-		2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		2DAEE6221C16CB9400D863F6 /* HeartCameraScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */; settings = {ASSET_TAGS = (); }; };
-		2DAEE6231C16CB9400D863F6 /* HeartCameraScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */; settings = {ASSET_TAGS = (); }; };
 		2DFDA1821BF07438006D938B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1811BF07438006D938B /* main.m */; };
 		2DFDA1851BF07438006D938B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1841BF07438006D938B /* AppDelegate.m */; };
 		2DFDA18D1BF07438006D938B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDA18C1BF07438006D938B /* Assets.xcassets */; };
@@ -75,34 +61,9 @@
 		2D15DA6D1C22BE9B009E00E8 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
-		2D15DA721C22CE57009E00E8 /* UserFB+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserFB+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2D15DA731C22CE57009E00E8 /* UserFB+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserFB+CoreDataProperties.m"; sourceTree = "<group>"; };
-		2D15DA741C22CE57009E00E8 /* UserFB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFB.h; sourceTree = "<group>"; };
-		2D15DA751C22CE57009E00E8 /* UserFB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFB.m; sourceTree = "<group>"; };
-		2D15DA761C22CE57009E00E8 /* HeartRate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HeartRate+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2D15DA771C22CE57009E00E8 /* HeartRate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HeartRate+CoreDataProperties.m"; sourceTree = "<group>"; };
-		2D15DA781C22CE57009E00E8 /* HeartRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRate.h; sourceTree = "<group>"; };
-		2D15DA791C22CE57009E00E8 /* HeartRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRate.m; sourceTree = "<group>"; };
 		2D539A9A1C06AA77000F472F /* PedoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedoHomeViewController.h; sourceTree = "<group>"; };
 		2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedoHomeViewController.m; sourceTree = "<group>"; };
 		2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PedoHomeViewController.xib; sourceTree = "<group>"; };
-		2D539AA41C06ACD8000F472F /* PedoAttributes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PedoAttributes.xcdatamodel; sourceTree = "<group>"; };
-		2D539AA61C06AD81000F472F /* Locations+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Locations+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2D539AA71C06AD81000F472F /* Locations+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Locations+CoreDataProperties.m"; sourceTree = "<group>"; };
-		2D539AA81C06AD81000F472F /* Locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locations.h; sourceTree = "<group>"; };
-		2D539AA91C06AD81000F472F /* Locations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locations.m; sourceTree = "<group>"; };
-		2D539AAA1C06AD81000F472F /* Run+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Run+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2D539AAB1C06AD81000F472F /* Run+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Run+CoreDataProperties.m"; sourceTree = "<group>"; };
-		2D539AAC1C06AD81000F472F /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
-		2D539AAD1C06AD81000F472F /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
-		2D539AB41C06BA81000F472F /* MathCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathCalculation.h; sourceTree = "<group>"; };
-		2D539AB51C06BA81000F472F /* MathCalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathCalculation.m; sourceTree = "<group>"; };
-		2D539AB71C06C055000F472F /* MulticolorPolylineRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineRoute.h; sourceTree = "<group>"; };
-		2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineRoute.m; sourceTree = "<group>"; };
-		2D539ABB1C07114D000F472F /* PedometerCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PedometerCoreData.xcdatamodel; sourceTree = "<group>"; };
-		2DAEE61F1C16CB9400D863F6 /* HeartCameraScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartCameraScreen.h; sourceTree = "<group>"; };
-		2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartCameraScreen.m; sourceTree = "<group>"; };
-		2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeartCameraScreen.xib; sourceTree = "<group>"; };
 		2DFDA17D1BF07438006D938B /* Absent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Absent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFDA1811BF07438006D938B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DFDA1831BF07438006D938B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -177,9 +138,6 @@
 				2D15DA641C229EC6009E00E8 /* Filter.m */,
 				2D15DA651C229EC6009E00E8 /* PulseDetector.h */,
 				2D15DA661C229EC6009E00E8 /* PulseDetector.mm */,
-				2DAEE61F1C16CB9400D863F6 /* HeartCameraScreen.h */,
-				2DAEE6201C16CB9400D863F6 /* HeartCameraScreen.m */,
-				2DAEE6211C16CB9400D863F6 /* HeartCameraScreen.xib */,
 				2D15DA6D1C22BE9B009E00E8 /* TestViewController.h */,
 				2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */,
 				2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */,
@@ -205,24 +163,6 @@
 		2D539AB21C06ADC6000F472F /* PedoData */ = {
 			isa = PBXGroup;
 			children = (
-				2D539AA31C06ACD8000F472F /* PedoAttributes.xcdatamodeld */,
-				2D539AA61C06AD81000F472F /* Locations+CoreDataProperties.h */,
-				2D539AA71C06AD81000F472F /* Locations+CoreDataProperties.m */,
-				2D539AA81C06AD81000F472F /* Locations.h */,
-				2D539AA91C06AD81000F472F /* Locations.m */,
-				2D539AAA1C06AD81000F472F /* Run+CoreDataProperties.h */,
-				2D539AAB1C06AD81000F472F /* Run+CoreDataProperties.m */,
-				2D539AAC1C06AD81000F472F /* Run.h */,
-				2D539AAD1C06AD81000F472F /* Run.m */,
-				2D15DA721C22CE57009E00E8 /* UserFB+CoreDataProperties.h */,
-				2D15DA731C22CE57009E00E8 /* UserFB+CoreDataProperties.m */,
-				2D15DA741C22CE57009E00E8 /* UserFB.h */,
-				2D15DA751C22CE57009E00E8 /* UserFB.m */,
-				2D15DA761C22CE57009E00E8 /* HeartRate+CoreDataProperties.h */,
-				2D15DA771C22CE57009E00E8 /* HeartRate+CoreDataProperties.m */,
-				2D15DA781C22CE57009E00E8 /* HeartRate.h */,
-				2D15DA791C22CE57009E00E8 /* HeartRate.m */,
-				2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */,
 			);
 			name = PedoData;
 			sourceTree = "<group>";
@@ -230,10 +170,6 @@
 		2D539AB31C06BA49000F472F /* Calculation */ = {
 			isa = PBXGroup;
 			children = (
-				2D539AB41C06BA81000F472F /* MathCalculation.h */,
-				2D539AB51C06BA81000F472F /* MathCalculation.m */,
-				2D539AB71C06C055000F472F /* MulticolorPolylineRoute.h */,
-				2D539AB81C06C055000F472F /* MulticolorPolylineRoute.m */,
 			);
 			name = Calculation;
 			sourceTree = "<group>";
@@ -469,7 +405,6 @@
 				2DFDA1D91BF1F2B2006D938B /* logout.png in Resources */,
 				2DFDA1C11BF1D5E7006D938B /* LoginVC.xib in Resources */,
 				2D539A9E1C06AA77000F472F /* PedoHomeViewController.xib in Resources */,
-				2DAEE6231C16CB9400D863F6 /* HeartCameraScreen.xib in Resources */,
 				2DFDA18D1BF07438006D938B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,27 +478,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D15DA7C1C22CE57009E00E8 /* HeartRate+CoreDataProperties.m in Sources */,
 				2DFDA1851BF07438006D938B /* AppDelegate.m in Sources */,
 				2DFDA1C01BF1D5E7006D938B /* LoginVC.m in Sources */,
-				2D539AAF1C06AD81000F472F /* Locations.m in Sources */,
-				2D539AB01C06AD81000F472F /* Run+CoreDataProperties.m in Sources */,
-				2D539AAE1C06AD81000F472F /* Locations+CoreDataProperties.m in Sources */,
-				2D539AB91C06C055000F472F /* MulticolorPolylineRoute.m in Sources */,
 				2D15DA671C229EC6009E00E8 /* Filter.m in Sources */,
-				2D15DA7B1C22CE57009E00E8 /* UserFB.m in Sources */,
-				2D539AB61C06BA81000F472F /* MathCalculation.m in Sources */,
 				2DFDA1CC1BF1E807006D938B /* MainNavC.m in Sources */,
-				2D15DA7D1C22CE57009E00E8 /* HeartRate.m in Sources */,
 				2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */,
-				2D539AB11C06AD81000F472F /* Run.m in Sources */,
-				2DAEE6221C16CB9400D863F6 /* HeartCameraScreen.m in Sources */,
 				2D15DA701C22BE9B009E00E8 /* TestViewController.m in Sources */,
-				2D539AA51C06ACD8000F472F /* PedoAttributes.xcdatamodeld in Sources */,
 				2DFDA1821BF07438006D938B /* main.m in Sources */,
 				2D15DA681C229EC6009E00E8 /* PulseDetector.mm in Sources */,
-				2D15DA7A1C22CE57009E00E8 /* UserFB+CoreDataProperties.m in Sources */,
-				2D539ABC1C07114D000F472F /* PedometerCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +619,7 @@
 			baseConfigurationReference = A08490970DB1E42314833BF3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bernard Tyaa (7G8L8Y9SP8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Absent",
@@ -706,6 +629,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skripsi.absent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cbbfb220-7b8f-41a9-af8f-536ad0bc9ae3";
 			};
 			name = Debug;
 		};
@@ -714,6 +638,7 @@
 			baseConfigurationReference = D9E9A0A623A02B6171CBB70F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bernard Tyaa (7G8L8Y9SP8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Absent",
@@ -723,6 +648,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skripsi.absent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cbbfb220-7b8f-41a9-af8f-536ad0bc9ae3";
 			};
 			name = Release;
 		};
@@ -814,29 +740,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2D539AA31C06ACD8000F472F /* PedoAttributes.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2D539AA41C06ACD8000F472F /* PedoAttributes.xcdatamodel */,
-			);
-			currentVersion = 2D539AA41C06ACD8000F472F /* PedoAttributes.xcdatamodel */;
-			path = PedoAttributes.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		2D539ABA1C07114D000F472F /* PedometerCoreData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2D539ABB1C07114D000F472F /* PedometerCoreData.xcdatamodel */,
-			);
-			currentVersion = 2D539ABB1C07114D000F472F /* PedometerCoreData.xcdatamodel */;
-			path = PedometerCoreData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2DFDA1751BF07438006D938B /* Project object */;
 }

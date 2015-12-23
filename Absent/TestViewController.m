@@ -45,6 +45,18 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     [self settingUpDetectionModel];
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    [self resume];
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    [self pause];
+}
+
 - (void)settingUpDetectionModel {
     self.filter = [[Filter alloc]init];
     self.pulseDetector = [[PulseDetector alloc]init];
@@ -141,6 +153,37 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     
     [self.captureSession stopRunning];
     self.captureSession = nil;
+}
+
+#pragma mark Pause and Resume of pulse detection
+-(void) pause {
+    
+    if(self.currentState==STATE_PAUSED) return;
+    
+    // switch off the torch
+    if([self.camera isTorchModeSupported:AVCaptureTorchModeOn]) {
+        [self.camera lockForConfiguration:nil];
+        self.camera.torchMode=AVCaptureTorchModeOff;
+        [self.camera unlockForConfiguration];
+    }
+    self.currentState=STATE_PAUSED;
+    // let the application go to sleep if the phone is idle
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
+}
+
+-(void) resume {
+    
+    if(self.currentState!=STATE_PAUSED) return;
+    
+    // switch on the torch
+    if([self.camera isTorchModeSupported:AVCaptureTorchModeOn]) {
+        [self.camera lockForConfiguration:nil];
+        [self.camera unlockForConfiguration];
+    }
+    self.currentState=STATE_SAMPLING;
+    // stop the app from sleeping
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
 }
 
 // r,g,b values are from 0 to 1 // h = [0,360], s = [0,1], v = [0,1]

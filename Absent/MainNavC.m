@@ -9,7 +9,6 @@
 #import "MainNavC.h"
 #import "LoginVC.h"
 #import "PedoHomeViewController.h"
-#import "HeartCameraScreen.h"
 #import "TestViewController.h"
 
 @interface MainNavC ()
@@ -17,7 +16,6 @@
 @property (nonatomic, strong) LoginVC *loginVC;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) PedoHomeViewController *pedometerVC;
-@property (nonatomic, strong) HeartCameraScreen *heartScreen;
 @property (nonatomic, strong) TestViewController *testVC;
 
 @end
