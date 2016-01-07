@@ -619,6 +619,7 @@
 			baseConfigurationReference = A08490970DB1E42314833BF3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bernard Tyaa (7G8L8Y9SP8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bernard Tyaa (7G8L8Y9SP8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,6 +639,7 @@
 			baseConfigurationReference = D9E9A0A623A02B6171CBB70F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bernard Tyaa (7G8L8Y9SP8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bernard Tyaa (7G8L8Y9SP8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

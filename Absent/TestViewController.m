@@ -101,6 +101,10 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     if([self.camera isTorchModeSupported:AVCaptureTorchModeOn]) {
         [self.camera lockForConfiguration:nil];
         self.camera.torchMode=AVCaptureTorchModeOn;
+        // set the minimum acceptable frame rate to 10 fps
+        [self.camera setActiveVideoMinFrameDuration:CMTimeMake(1, 10)];
+        [self.camera setActiveVideoMaxFrameDuration:CMTimeMake(1, 10)];
+        //    videoOutput.minFrameDuration=CMTimeMake(1, 10);
         [self.camera unlockForConfiguration];
     }
     
@@ -123,11 +127,6 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     
     // configure the pixel format
     videoOutput.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA], (id)kCVPixelBufferPixelFormatTypeKey, nil];
-    
-    // set the minimum acceptable frame rate to 10 fps
-    [self.camera setActiveVideoMinFrameDuration:CMTimeMake(1, 10)];
-    [self.camera setActiveVideoMaxFrameDuration:CMTimeMake(1, 10)];
-//    videoOutput.minFrameDuration=CMTimeMake(1, 10);
     
     // and the size of the frames we want - we'll use the smallest frame size available
     [self.captureSession setSessionPreset:AVCaptureSessionPresetLow];
