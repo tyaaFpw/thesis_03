@@ -14,7 +14,7 @@
 #import "MainNavC.h"
 //#import "MathCalculation.h"
 #import <CoreLocation/CoreLocation.h>
-//#import <AudioToolbox/AudioToolbox.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import <MapKit/MapKit.h>
 
 @interface PedoHomeViewController () <UIActionSheetDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
@@ -38,7 +38,7 @@
 //
 //- (void)settingUpAllAttributes {
 //    self.seconds = 0;
-//    
+//
 //    self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
 //    self.distance = 0;
 //    self.locationsMutable = [NSMutableArray array];
@@ -94,12 +94,12 @@
 //}
 //
 ////- (void)updateAllLabels {
-////    self.timeDurationLbl.text = [NSString stringWithFormat:@"Time: %@", [MathCalculation stringTheSecondCount:self.seconds inLongFormat:NO]];
-////    
-////    self.distanceLbl.text = [NSString stringWithFormat:@"Distance: %@", [MathCalculation stringTheDistance:self.distance]];
-////    
-////    self.paceLbl.text = [NSString stringWithFormat:@"Pace: %@", [MathCalculation stringAveragePaceFromDistance:self.distance overTime:self.seconds]];
-////}
+//////    self.timeDurationLbl.text = [NSString stringWithFormat:@"Time: %@", [MathCalculation stringTheSecondCount:self.seconds inLongFormat:NO]];
+//////    
+//////    self.distanceLbl.text = [NSString stringWithFormat:@"Distance: %@", [MathCalculation stringTheDistance:self.distance]];
+//////    
+//////    self.paceLbl.text = [NSString stringWithFormat:@"Pace: %@", [MathCalculation stringAveragePaceFromDistance:self.distance overTime:self.seconds]];
+//////}
 //
 //#pragma mark -CLLocationManagerDelegate
 //- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
@@ -139,7 +139,7 @@
 //    
 //    return nil;
 //}
-//
+
 - (IBAction)backToMainHall:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
