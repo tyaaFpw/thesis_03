@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xBs-vg-yT1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0FJ-9f-Y50">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -25,7 +25,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pGg-6v-bdr" kind="push" id="r3R-7L-Alr"/>
+                                    <segue destination="pGg-6v-bdr" kind="push" id="CFt-RM-Uta"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhm-BQ-cu8">
@@ -36,7 +36,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CGm-zh-iTG" kind="push" id="ZIH-SQ-UYY"/>
+                                    <segue destination="CGm-zh-iTG" kind="push" id="yrl-J6-C9x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH5-mX-nO0">
@@ -47,7 +47,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="IT2-8f-7aj" kind="push" id="GH8-wE-mh5"/>
+                                    <segue destination="IT2-8f-7aj" kind="push" id="nnh-8H-ORk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to MoonRunner!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="196" translatesAutoresizingMaskIntoConstraints="NO" id="cw4-mk-z52">
@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20T-qI-lpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="64"/>
+            <point key="canvasLocation" x="558" y="64"/>
         </scene>
         <!--New Run-->
         <scene sceneID="fGt-mZ-WXf">
@@ -215,7 +215,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="991" y="64"/>
         </scene>
         <!--Badges-->
         <scene sceneID="UBJ-vF-09Z">
@@ -449,30 +449,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="1434" y="64"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="DN4-pd-vZq">
+        <scene sceneID="jdE-c3-49F">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xBs-vg-yT1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0FJ-9f-Y50" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aKh-WG-6gr">
+                    <navigationItem key="navigationItem" id="nQx-mZ-m8F"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jep-wU-8cR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ApA-oN-WYB" kind="relationship" relationship="rootViewController" id="tB1-Ck-Aek"/>
+                        <segue destination="ApA-oN-WYB" kind="relationship" relationship="rootViewController" id="R6u-gO-7zp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wiq-4d-unL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mda-Uf-vFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="64"/>
+            <point key="canvasLocation" x="26" y="64"/>
         </scene>
     </scenes>
     <resources>

@@ -11,6 +11,7 @@
 #import "PedoHomeViewController.h"
 #import "TestViewController.h"
 #import "HomeViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface MainNavC ()
 
@@ -67,12 +68,17 @@
 - (IBAction)goingToPedometerMenu:(id)sender {
     
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    self.runHome = [mainStoryBoard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-    [[self runHome]setManagedObjectContext:self.runHome.managedObjectContext];
-    [self presentViewController:self.runHome animated:YES completion:nil];
-    
+    UINavigationController *mainRunNavC = (UINavigationController *)[mainStoryBoard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    //[[self runHome]setManagedObjectContext:self.runHome.managedObjectContext];
+    //UINavigationController *navigationController = (UINavigationController *)self;
+//    self.runHome = [self.navigationController viewControllers][3];
+//    
+//    self.managedObjectContext = self.runHome.managedObjectContext;
+//    [self saveContext];
+    [self presentViewController:mainRunNavC animated:YES completion:nil];
 //    self.pedometerVC = [[PedoHomeViewController alloc]initWithNibName:@"PedoHomeViewController" bundle:nil];
 //    [self presentViewController:self.pedometerVC animated:YES completion:nil];
+//    homeViewController.managedObjectContext = self.managedObjectContext;
 }
 
 - (IBAction)goingToHeartRateMenu:(id)sender {
@@ -89,6 +95,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)saveContext
+{
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
 }
 
 @end
