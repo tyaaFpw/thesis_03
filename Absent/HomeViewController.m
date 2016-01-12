@@ -11,6 +11,7 @@
 #import "PastRunsViewController.h"
 #import "BadgesTableViewController.h"
 #import "BadgeController.h"
+#import <CoreData/CoreData.h>
 
 @interface HomeViewController ()
 

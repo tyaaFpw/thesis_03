@@ -10,6 +10,7 @@
 #import "LoginVC.h"
 #import "PedoHomeViewController.h"
 #import "TestViewController.h"
+#import "HomeViewController.h"
 
 @interface MainNavC ()
 
@@ -17,6 +18,7 @@
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) PedoHomeViewController *pedometerVC;
 @property (nonatomic, strong) TestViewController *testVC;
+@property (nonatomic, strong) HomeViewController *runHome;
 
 @end
 
@@ -63,8 +65,14 @@
 }
 
 - (IBAction)goingToPedometerMenu:(id)sender {
-    self.pedometerVC = [[PedoHomeViewController alloc]initWithNibName:@"PedoHomeViewController" bundle:nil];
-    [self presentViewController:self.pedometerVC animated:YES completion:nil];
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    self.runHome = [mainStoryBoard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    [[self runHome]setManagedObjectContext:self.runHome.managedObjectContext];
+    [self presentViewController:self.runHome animated:YES completion:nil];
+    
+//    self.pedometerVC = [[PedoHomeViewController alloc]initWithNibName:@"PedoHomeViewController" bundle:nil];
+//    [self presentViewController:self.pedometerVC animated:YES completion:nil];
 }
 
 - (IBAction)goingToHeartRateMenu:(id)sender {
