@@ -57,10 +57,6 @@
 		2D531B491C43619F0058FBF2 /* RunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B441C43619F0058FBF2 /* RunCell.m */; settings = {ASSET_TAGS = (); }; };
 		2D531B4A1C43619F0058FBF2 /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B461C43619F0058FBF2 /* BadgeCell.m */; settings = {ASSET_TAGS = (); }; };
 		2D531B4B1C43619F0058FBF2 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B481C43619F0058FBF2 /* MulticolorPolylineSegment.m */; settings = {ASSET_TAGS = (); }; };
-		2D531B4F1C4384500058FBF2 /* RunningHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B4D1C4384500058FBF2 /* RunningHomeVC.m */; settings = {ASSET_TAGS = (); }; };
-		2D531B501C4384500058FBF2 /* RunningHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D531B4E1C4384500058FBF2 /* RunningHomeVC.xib */; settings = {ASSET_TAGS = (); }; };
-		2D531B541C4389D70058FBF2 /* NewRunVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B521C4389D70058FBF2 /* NewRunVC.m */; settings = {ASSET_TAGS = (); }; };
-		2D531B551C4389D70058FBF2 /* NewRunVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D531B531C4389D70058FBF2 /* NewRunVC.xib */; settings = {ASSET_TAGS = (); }; };
 		2D531B571C43AA270058FBF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D531B561C43AA270058FBF2 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		2D531B671C43AC040058FBF2 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B591C43AC040058FBF2 /* Location.m */; settings = {ASSET_TAGS = (); }; };
 		2D531B681C43AC040058FBF2 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B5B1C43AC040058FBF2 /* Badge.m */; settings = {ASSET_TAGS = (); }; };
@@ -171,12 +167,6 @@
 		2D531B461C43619F0058FBF2 /* BadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCell.m; sourceTree = "<group>"; };
 		2D531B471C43619F0058FBF2 /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
 		2D531B481C43619F0058FBF2 /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
-		2D531B4C1C4384500058FBF2 /* RunningHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunningHomeVC.h; sourceTree = "<group>"; };
-		2D531B4D1C4384500058FBF2 /* RunningHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunningHomeVC.m; sourceTree = "<group>"; };
-		2D531B4E1C4384500058FBF2 /* RunningHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RunningHomeVC.xib; sourceTree = "<group>"; };
-		2D531B511C4389D70058FBF2 /* NewRunVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRunVC.h; sourceTree = "<group>"; };
-		2D531B521C4389D70058FBF2 /* NewRunVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRunVC.m; sourceTree = "<group>"; };
-		2D531B531C4389D70058FBF2 /* NewRunVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewRunVC.xib; sourceTree = "<group>"; };
 		2D531B561C43AA270058FBF2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2D531B581C43AC040058FBF2 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		2D531B591C43AC040058FBF2 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
@@ -323,12 +313,6 @@
 				2D531B391C4361840058FBF2 /* BadgesTableViewController.m */,
 				2D531B3A1C4361840058FBF2 /* BadgeDetailsViewController.h */,
 				2D531B3B1C4361840058FBF2 /* BadgeDetailsViewController.m */,
-				2D531B4C1C4384500058FBF2 /* RunningHomeVC.h */,
-				2D531B4D1C4384500058FBF2 /* RunningHomeVC.m */,
-				2D531B4E1C4384500058FBF2 /* RunningHomeVC.xib */,
-				2D531B511C4389D70058FBF2 /* NewRunVC.h */,
-				2D531B521C4389D70058FBF2 /* NewRunVC.m */,
-				2D531B531C4389D70058FBF2 /* NewRunVC.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -639,7 +623,6 @@
 				2D531B281C435E5D0058FBF2 /* tethys.jpg in Resources */,
 				2D531B201C435E5D0058FBF2 /* mimas.jpg in Resources */,
 				2D531B2A1C435E5D0058FBF2 /* titania.jpg in Resources */,
-				2D531B551C4389D70058FBF2 /* NewRunVC.xib in Resources */,
 				2D531B181C435E5D0058FBF2 /* earth.jpg in Resources */,
 				2D531B571C43AA270058FBF2 /* Main.storyboard in Resources */,
 				2D15DA711C22BE9B009E00E8 /* TestViewController.xib in Resources */,
@@ -666,7 +649,6 @@
 				2D531B1A1C435E5D0058FBF2 /* europa.jpg in Resources */,
 				2D531B161C435E5D0058FBF2 /* deimos.jpg in Resources */,
 				2DFDA1C51BF1D61A006D938B /* gmail.png in Resources */,
-				2D531B501C4384500058FBF2 /* RunningHomeVC.xib in Resources */,
 				2D531B241C435E5D0058FBF2 /* phobos.jpg in Resources */,
 				2DFDA1CD1BF1E807006D938B /* MainNavC.xib in Resources */,
 				2DFDA1C41BF1D61A006D938B /* facebook.png in Resources */,
@@ -781,9 +763,7 @@
 				2D531ADB1C435DE30058FBF2 /* BadgeController.m in Sources */,
 				2DFDA1821BF07438006D938B /* main.m in Sources */,
 				2D531B6E1C43AC040058FBF2 /* Location+CoreDataProperties.m in Sources */,
-				2D531B541C4389D70058FBF2 /* NewRunVC.m in Sources */,
 				2D15DA681C229EC6009E00E8 /* PulseDetector.mm in Sources */,
-				2D531B4F1C4384500058FBF2 /* RunningHomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
