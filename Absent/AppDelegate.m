@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "LoginVC.h"
 #import "MainNavC.h"
-//#import "HomeViewController.h"
+#import "HomeViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <CoreData/CoreData.h>
@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) LoginVC *loginVC;
 @property (nonatomic, strong) MainNavC *mainHall;
-//@property (nonatomic, strong) HomeViewController *runHome;
+@property (nonatomic, strong) HomeViewController *runHome;
 
 @end
 
@@ -68,6 +68,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
     //[self.mainHall saveContext];
+    [self.runHome saveContext];
 }
 
 @end

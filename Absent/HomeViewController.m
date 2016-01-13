@@ -29,8 +29,8 @@
 {
     [super viewWillAppear:animated];
     
-    self.mainNav = [[MainNavC alloc]init];
-    [self.mainNav saveContext];
+    //self.mainNav = [[MainNavC alloc]init];
+    //[self.mainNav saveContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
@@ -47,13 +47,30 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UIViewController *nextController = [segue destinationViewController];
-    if ([nextController isKindOfClass:[NewRunViewController class]]) {
-        ((NewRunViewController *) nextController).managedObjectContext = self.managedObjectContext;
-    } else if ([nextController isKindOfClass:[PastRunsViewController class]]) {
-        ((PastRunsViewController *) nextController).runArray = self.runArray;
-    } else if ([nextController isKindOfClass:[BadgesTableViewController class]]) {
-        ((BadgesTableViewController *) nextController).earnStatusArray = [[BadgeController defaultController] earnStatusesForRuns:self.runArray];
+    //if (self.navigationController.visibleViewController == self) {
+        //[self performSegueWithIdentifier:@"thankyou" sender:self];
+        UIViewController *nextController = [segue destinationViewController];
+        if ([nextController isKindOfClass:[NewRunViewController class]]) {
+            ((NewRunViewController *) nextController).managedObjectContext = self.managedObjectContext;
+        } else if ([nextController isKindOfClass:[PastRunsViewController class]]) {
+            ((PastRunsViewController *) nextController).runArray = self.runArray;
+        } else if ([nextController isKindOfClass:[BadgesTableViewController class]]) {
+            ((BadgesTableViewController *) nextController).earnStatusArray = [[BadgeController defaultController] earnStatusesForRuns:self.runArray];
+        }
+    //}
+}
+
+- (void)saveContext
+{
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
     }
 }
 
@@ -95,13 +112,29 @@
         return _persistentStoreCoordinator;
     }
     
+//    NSString *storePath = [[[self applicationDocumentsDirectory] path] stringByAppendingPathComponent:@"Model.sqlite"];
+//    
+//    // set up the backing store
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    // If the expected store doesn't exist, copy the default store.
+//    if (![fileManager fileExistsAtPath:storePath]) {
+//        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"dict" ofType:@"sqlite"];
+//        if (defaultStorePath) {
+//            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
+//        }
+//    }
+//    
+//    NSURL *storeURL = [NSURL fileURLWithPath:storePath];
+//    
+    
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
+    
     
     NSError *error = nil;
     self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+ //       abort();
     }
     
     return _persistentStoreCoordinator;
