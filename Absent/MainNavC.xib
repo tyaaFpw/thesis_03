@@ -12,7 +12,6 @@
                 <outlet property="facebookName" destination="tSh-jc-e2H" id="xP5-lR-SKw"/>
                 <outlet property="facebookProfilePict" destination="BhG-Kr-6rc" id="8Ig-7s-0zf"/>
                 <outlet property="heartBtn" destination="SQR-Ow-fk1" id="EqS-hj-AGr"/>
-                <outlet property="historyBtn" destination="Hbv-gO-Tmn" id="C5O-4r-kBZ"/>
                 <outlet property="logoutButton" destination="dbL-3e-1Ce" id="i9R-px-063"/>
                 <outlet property="pedoBtn" destination="FYW-Tm-A9x" id="VcF-2T-ygk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,18 +27,21 @@
                     <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                     <color key="textColor" red="0.96470588235294119" green="0.99215686274509807" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my_email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMc-ot-pjW">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
-                    <color key="textColor" red="0.75554912479008496" green="0.75840347869357383" blue="0.76696654040404044" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my_facebook_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSh-jc-e2H">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
+                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="shadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BhG-Kr-6rc">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -60,16 +62,22 @@
                         </mask>
                     </variation>
                 </imageView>
-                <navigationBar contentMode="scaleToFill" backIndicatorImage="7C68441C-89CA-4D63-86C8-7E7BFC316317" translatesAutoresizingMaskIntoConstraints="NO" id="Byn-dY-Qu0">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byn-dY-Qu0">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                        <color key="textColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="Main Hall" id="0QJ-le-hlk">
-                            <barButtonItem key="leftBarButtonItem" tag="1" image="back.png" id="BvM-cw-Joc">
+                            <barButtonItem key="leftBarButtonItem" tag="1" title="Back" id="BvM-cw-Joc">
                                 <connections>
                                     <action selector="backButtonTapped:" destination="-1" id="AZ2-jG-0Hl"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" tag="2" image="logout.png" style="plain" id="dbL-3e-1Ce">
+                            <barButtonItem key="rightBarButtonItem" tag="2" title="LogOut" id="dbL-3e-1Ce">
                                 <connections>
                                     <action selector="logoutButtonTapped:" destination="-1" id="eTE-F9-BC9"/>
                                 </connections>
@@ -77,53 +85,68 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYW-Tm-A9x">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="Pedometer">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" red="0.96470588239999999" green="0.99215686270000003" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="47" y="340" width="76" height="30"/>
-                    </variation>
-                    <connections>
-                        <action selector="goingToPedometerMenu:" destination="-1" eventType="touchUpInside" id="OEI-g1-5Cj"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbv-gO-Tmn">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="My History">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" red="0.96470588239999999" green="0.99215686270000003" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="161" y="442" width="74" height="30"/>
-                    </variation>
-                    <connections>
-                        <action selector="goingToMyHistoryMenu:" destination="-1" eventType="touchUpInside" id="Ygm-tY-Bcd"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQR-Ow-fk1">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="HeartRate">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="194" id="cv1-Vb-U4O"/>
+                        <constraint firstAttribute="height" constant="79" id="naz-sL-8Fc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                    <state key="normal" title="HeartRate" backgroundImage="green-btn">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" red="0.96470588239999999" green="0.99215686270000003" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="273" y="340" width="70" height="30"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="cv1-Vb-U4O"/>
+                            <exclude reference="naz-sL-8Fc"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="cv1-Vb-U4O"/>
+                            <include reference="naz-sL-8Fc"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="goingToHeartRateMenu:" destination="-1" eventType="touchUpInside" id="05c-Mv-o1b"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYW-Tm-A9x">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="194" id="828-co-G6V"/>
+                        <constraint firstAttribute="height" constant="79" id="X2C-8P-SGV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                    <state key="normal" title="Pedometer" backgroundImage="green-btn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="828-co-G6V"/>
+                            <exclude reference="X2C-8P-SGV"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="828-co-G6V"/>
+                            <include reference="X2C-8P-SGV"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="goingToPedometerMenu:" destination="-1" eventType="touchUpInside" id="OEI-g1-5Cj"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.33725490196078434" green="0.67450980392156867" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="IMc-ot-pjW" firstAttribute="top" secondItem="tSh-jc-e2H" secondAttribute="bottom" constant="22" id="3Xq-Ub-2mQ"/>
                 <constraint firstItem="BhG-Kr-6rc" firstAttribute="top" secondItem="Byn-dY-Qu0" secondAttribute="bottom" constant="33" id="3c1-08-4ae"/>
+                <constraint firstAttribute="bottom" secondItem="SQR-Ow-fk1" secondAttribute="bottom" constant="94" id="5WJ-yh-INv"/>
+                <constraint firstItem="SQR-Ow-fk1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="103" id="HMb-AC-9b4"/>
                 <constraint firstItem="IMc-ot-pjW" firstAttribute="leading" secondItem="BhG-Kr-6rc" secondAttribute="trailing" constant="17" id="JCA-4g-SCf"/>
                 <constraint firstItem="Dw2-oS-bik" firstAttribute="top" secondItem="Byn-dY-Qu0" secondAttribute="bottom" constant="33" id="P8z-z6-tch"/>
                 <constraint firstItem="tSh-jc-e2H" firstAttribute="leading" secondItem="BhG-Kr-6rc" secondAttribute="trailing" constant="17" id="PbY-64-2FO"/>
@@ -135,10 +158,13 @@
                     <variation key="widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstItem="BhG-Kr-6rc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="XCn-cl-pE9"/>
+                <constraint firstItem="FYW-Tm-A9x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="103" id="bKM-Ek-FEp"/>
                 <constraint firstItem="Byn-dY-Qu0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cNS-4E-4GP">
                     <variation key="widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstItem="tSh-jc-e2H" firstAttribute="top" secondItem="Dw2-oS-bik" secondAttribute="bottom" constant="13" id="o0t-sP-KIK"/>
+                <constraint firstItem="SQR-Ow-fk1" firstAttribute="top" secondItem="FYW-Tm-A9x" secondAttribute="bottom" constant="51" id="qAL-DU-guN"/>
+                <constraint firstItem="IMc-ot-pjW" firstAttribute="top" secondItem="tSh-jc-e2H" secondAttribute="bottom" constant="18" id="qRX-Ga-50L"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
@@ -147,22 +173,25 @@
                     <exclude reference="tSh-jc-e2H"/>
                     <exclude reference="BhG-Kr-6rc"/>
                     <exclude reference="Byn-dY-Qu0"/>
-                    <exclude reference="FYW-Tm-A9x"/>
-                    <exclude reference="Hbv-gO-Tmn"/>
                     <exclude reference="SQR-Ow-fk1"/>
+                    <exclude reference="FYW-Tm-A9x"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="P8z-z6-tch"/>
-                    <exclude reference="Tur-Iq-lsx"/>
-                    <exclude reference="3Xq-Ub-2mQ"/>
-                    <exclude reference="JCA-4g-SCf"/>
-                    <exclude reference="PbY-64-2FO"/>
-                    <exclude reference="o0t-sP-KIK"/>
                     <exclude reference="PiM-D3-wDE"/>
                     <exclude reference="X01-zI-t7u"/>
                     <exclude reference="cNS-4E-4GP"/>
                     <exclude reference="3c1-08-4ae"/>
                     <exclude reference="XCn-cl-pE9"/>
+                    <exclude reference="P8z-z6-tch"/>
+                    <exclude reference="Tur-Iq-lsx"/>
+                    <exclude reference="PbY-64-2FO"/>
+                    <exclude reference="o0t-sP-KIK"/>
+                    <exclude reference="JCA-4g-SCf"/>
+                    <exclude reference="qRX-Ga-50L"/>
+                    <exclude reference="bKM-Ek-FEp"/>
+                    <exclude reference="5WJ-yh-INv"/>
+                    <exclude reference="HMb-AC-9b4"/>
+                    <exclude reference="qAL-DU-guN"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -172,166 +201,31 @@
                     <include reference="tSh-jc-e2H"/>
                     <include reference="BhG-Kr-6rc"/>
                     <include reference="Byn-dY-Qu0"/>
-                    <include reference="FYW-Tm-A9x"/>
-                    <include reference="Hbv-gO-Tmn"/>
                     <include reference="SQR-Ow-fk1"/>
+                    <include reference="FYW-Tm-A9x"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="P8z-z6-tch"/>
-                    <include reference="Tur-Iq-lsx"/>
-                    <include reference="3Xq-Ub-2mQ"/>
-                    <include reference="JCA-4g-SCf"/>
-                    <include reference="PbY-64-2FO"/>
-                    <include reference="o0t-sP-KIK"/>
                     <include reference="PiM-D3-wDE"/>
                     <include reference="X01-zI-t7u"/>
                     <include reference="cNS-4E-4GP"/>
                     <include reference="3c1-08-4ae"/>
                     <include reference="XCn-cl-pE9"/>
+                    <include reference="P8z-z6-tch"/>
+                    <include reference="Tur-Iq-lsx"/>
+                    <include reference="PbY-64-2FO"/>
+                    <include reference="o0t-sP-KIK"/>
+                    <include reference="JCA-4g-SCf"/>
+                    <include reference="qRX-Ga-50L"/>
+                    <include reference="bKM-Ek-FEp"/>
+                    <include reference="5WJ-yh-INv"/>
+                    <include reference="HMb-AC-9b4"/>
+                    <include reference="qAL-DU-guN"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="818" y="420"/>
+            <point key="canvasLocation" x="546" y="463"/>
         </view>
     </objects>
     <resources>
-        <image name="7C68441C-89CA-4D63-86C8-7E7BFC316317" width="36" height="36">
-            <mutableData key="keyedArchiveRepresentation">
-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
-/0KiBfxHrQf/GDkEYAAAAAAAAAAAMnwEwketB/9BogX7Q6AH/0KdCf9Dogb/Q6QG/0OkB/9CpAP/SKAb
-/zOZA/9arDL/5vLh///////1+PX//Pj+/8Pbuf8sngP/R6UX/0OkBf9Cnwf/Qp0J/0OiBv9DpAb/Q6QG
-/0OkBv9Cngn/Qp8H/0OkBv9DpAb/Q6QG/0CgBftGpwn/MnkEwgAAAAALHQAtQqAF/UOlBv9Bnwb+Qp0J
-/0OiBv9DpAb/Q6QH/0KjA/9JoBz/M5kD/1msMv/o8uL///////b59v/69vv/0uTJ/0uoE/8/oQP/RaUO
-/0KfB/9CnQn/Q6IG/0OkBv9DpAb/Q6IG/0KdCf9Cnwf/Q6QG/0OiBv9DpAb/Q6EG/0GcCP5Dogb/QqIF
-/AsbASwcRgJtSK8H/0CeBftBnQj+Q6IG/0OkBv9DpAf/QqQD/0mgHf8xmAP/VKsp/+by4f//////9vn2
-//v3/P/V5s7/SqcQ/zefA/9GpRX/Qp8H/0KdCv9Dogn/Q6QJ/0OkCf9DpAn/Qp4K/0OfCv9DpAn/Q6IF
-/0OkBf9DoQb/QpwJ/0OhBv9BogX7SK8H/xxFAmwqagOkSK4H/0CbBvtDoQb/Q6QG/0OkBv9CpAP/SKAc
-/zKYA/9TqiX/5PHf///////3+ff//Pf+/9jn0P9RqSP/O6AD/0unIP9EoBL/RZ4V/0akFP9FpRP/RaUT
-/0alFP9FnhX/RaAV/0alE/9FpBP/RqUV/0OhB/9CnQf/Q6EH/0OkBv9BoQX7SK8H/ypnA6M2hATQRqcH
-/0KgBfxDpAb/Q6QG/0KkA/9Gnxf/MpgD/1etL//l8eD///////n69//19PX/zOHD/zqjA/8amQL/NKAD
-/yqaA/8olgP/KpwD/yqdA/8snQP/L54D/ymWA/8pmAP/K50D/yqdA/8sngP/MJwD/0KdCv9DoQf/Q6QF
-/0OkBv9CogX8RqgG/zaDBc8+lwXuRKUG/0KjBf5DpAb/Q6QE/0WfE/83mwP/W641/+jy4v//////+fr5
-//Hx8f/5+vn/2uvV/87iyv/X59H/y93H/8vbxf/T5c//0+XP/9Tmz//S5c7/yNrD/87eyv/U5s//0+XO
-/9Pmz//T48//mcKI/zmfA/9EpA//Q6QH/0OkBv9Bngb+RKIH/z6YBe1CogX8Q6QG/0OkBv9DpAb/Q54N
-/0CdA/9BpAP/4O7a///////5+vn/8fHx//n5+f/////////////////++/7/+fb5////////////////
-///////69vr//Pr8///////////////////+///89/7/8fXv/1OpLv87oQP/RaUR/0KfB/9Cngf/Q6QG
-/0KiBfxCogX8Q6QG/0OkBv9Cngn/Q54N/0GjA/9AowP/4O7b///////t7+3/+fn5///////+/v7/////
-///7///59vn///////////////////////r2+v/8+vz///////////////////7///b09v//////9vr1
-/1GoK/88oQP/RJ8S/0KdCf9CowX+Q6QG/0KiBfw+mQXuRKYG/0GeBv5Cngf/Q6QE/0WkE/84oAP/XKw2
-/93n1////v///P78///+////////1OPP/8TWvv/T5c//1ObP/9Plz//U5s//zNzH/8vcxf/U5s//0+XP
-/9Pmz//S487/yNrE/83gyf/Z6dX/ocuQ/zegA/9DnxH/Qp4J/0OkBv9CowX+RKYG/z6YBe02hQTQRqgH
-/0GdBvxDpAb/Q6QG/0KkA/9HpBb/MpcD/1apLv/l8uD///////z++//6+fv/yNvA/zuhA/8dmgL/MJ4D
-/yqcA/8olgP/K5gD/y6eA/8qnQP/Kp0D/yqbA/8olQL/LJwD/y2eA/8onAP/Lp4D/0KfCv9Cngn/Q6QF
-/0OkBv9CogX8RqsH/zaDBc8qaAOkR60I/0GhBftDpAb/Q6QG/0OiB/9BnAP/SaIb/zSfA/9SqiX/5PHf
-///7///t7+3//////97t1/9OqBz/PqED/0qgIP9EnxL/RqUU/0WkE/9GpRP/RaIU/0WeFf9GohX/RqUT
-/0WkE/9GpRX/RqAX/0KdCf9DpAX/Q6QG/0OkBv9BnwX7R6wI/ypnA6McRgJtSK8H/0GhBftCpAX+Q6IG
-/0KdCf9DoAn/QqQD/0mlHP80nwP/Uqcm/93n1///////+vv5///////a69P/QZ4D/zebA/9GpRX/Q6IF
-/0OkCf9DoQr/Qp0K/0OhCv9DpAn/Q6QJ/0OkCf9Dnwr/Qp0H/0OiBv9DpAb/Q6QG/0OiBv9Amwb7R60I
-/xxFAmwLHQAtQqIF/EOlBv9BogX+Qp0J/0KgB/9DpAb/Q6IH/0KkA/9JoRz/MpgD/1qsNP/o8+T/////
-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
-bFBMAAAALAAABKRydVJVAAAAIgAABNBhckVHAAAAJgAABPJlblVTAAAAJgAABRhkYURLAAAALgAABT4A
-VgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUAcgBpAQ0AawBpACAA
-UgBHAEIAIABwAHIAbwBmAGkAbABQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A6AByAGkAYwBQAGUA
-cgBmAGkAbAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0EOAQ5ACAEPwRABD4E
-RAQwBDkEOwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUAIABSAFYAQpAadSgA
-IABSAEcAQgAggnJfaWPPj/AAUAByAG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4AZQByAGkAYwBvAEcA
-ZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGzHfLwYACAAUgBHAEIAINUEuFzTDMd8AE8A
-YgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIARwBCACAF2wXcBdwF
-2QBBAGwAbABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsAMEAbAB0AGEAbADhAG4A
-bwBzACAAUgBHAEIAIABwAHIAbwBmAGkAbGZukBoAIABSAEcAQgAgY8+P8GWHTvZOAIIsACAAUgBHAEIA
-IDDXMO0w1TChMKQw6wBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkAYwOTA7UDvQO5A7oD
-zAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcAZQBuAOkAcgBpAGMA
-bwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMORA4fDiUOTAAgAFIA
-RwBCACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkAbABpAFkAbABlAGkA
-bgBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBVAG4AaQB3AGUAcgBzAGEAbABuAHkAIABwAHIA
-bwBmAGkAbAAgAFIARwBCBB4EMQRJBDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcAQgZFBkQGQQAgBioG
-OQYxBkoGQQAgAFIARwBCACAGJwZEBjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcAQgAgAFAAcgBvAGYA
-aQBsAGUARwBlAG4AZQByAGUAbAAgAFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwAcwBldGV4dAAAAABD
-b3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBYWVogAAAAAAAA81IA
-AQAAAAEWz1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRYWVogAAAAAAAAKBoA
-ABWfAAC4NmN1cnYAAAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IAAP2R///7ov///aMA
-AAPcAADAbNIlJicoWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdlUmVwoykqK18QEE5T
-Qml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09iamVjdNIlJi0uV05TQXJyYXmiLSvSJSYwMV5OU011
-dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQA4AM0iUmOTpXTlND
-b2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tleWVkQXJjaGl2ZXLRQEFUcm9vdIABAAgAEQAaACMA
-LQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCpAKsArQCyALUAtwC5ALsAvQDCANkA
-2wDdHY8dlB2fHagdux2/HdId3R3mHesd8x32HfseCh4OHhUeHR4qHi8eMR4zHjgeQB5DHkgeUB5THmUe
-aB5tAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAHm8
-</mutableData>
-        </image>
-        <image name="back.png" width="36" height="36"/>
-        <image name="logout.png" width="36" height="36"/>
+        <image name="green-btn" width="172" height="91"/>
     </resources>
 </document>

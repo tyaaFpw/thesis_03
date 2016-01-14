@@ -21,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *facebookProfilePict;
 @property (weak, nonatomic) IBOutlet UIButton *pedoBtn;
 @property (weak, nonatomic) IBOutlet UIButton *heartBtn;
-@property (weak, nonatomic) IBOutlet UIButton *historyBtn;
 
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;

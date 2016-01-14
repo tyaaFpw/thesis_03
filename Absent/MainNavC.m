@@ -89,9 +89,6 @@
     [self presentViewController:self.testVC animated:YES completion:nil];
 }
 
-- (IBAction)goingToMyHistoryMenu:(id)sender {
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
