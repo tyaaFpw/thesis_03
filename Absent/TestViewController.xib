@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController">
             <connections>
-                <outlet property="cancelBtn" destination="DtN-RE-Uwg" id="m5g-f3-HCU"/>
                 <outlet property="detectInfoLbl" destination="Og4-5b-88s" id="7lR-iV-JvR"/>
                 <outlet property="infoImgView" destination="LfJ-mY-Dly" id="pB7-Bf-0Ia"/>
                 <outlet property="rateValLbl" destination="D3Y-uq-4Ai" id="qv1-CA-dgQ"/>
@@ -46,6 +45,7 @@
                         </mask>
                     </variation>
                     <connections>
+                        <action selector="savingDetection:" destination="-1" eventType="touchUpInside" id="z69-qm-QN7"/>
                         <action selector="savingTheOperation:" destination="-1" eventType="touchUpInside" id="PxW-MX-Xxa"/>
                     </connections>
                 </button>
@@ -132,40 +132,16 @@
                         <navigationItem title="HeartRateCounter" id="L6l-TA-3T7">
                             <barButtonItem key="leftBarButtonItem" title="Back" id="lBz-6A-Yrr">
                                 <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="backToPreviousPage:" destination="-1" id="zeH-i0-my1"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtN-RE-Uwg">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <color key="backgroundColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="OzK-j0-TYK"/>
-                        <constraint firstAttribute="width" constant="112" id="nd2-xJ-aKn"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
-                    <state key="normal" title="Cancel" backgroundImage="blue-btn">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="OzK-j0-TYK"/>
-                            <exclude reference="nd2-xJ-aKn"/>
-                        </mask>
-                    </variation>
-                    <variation key="widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="OzK-j0-TYK"/>
-                            <include reference="nd2-xJ-aKn"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <action selector="cancellingTheOperation:" destination="-1" eventType="touchUpInside" id="LUO-f2-z3r"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier=""/>
             <constraints>
                 <constraint firstItem="LfJ-mY-Dly" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="136" id="0Ti-mw-Pbb"/>
                 <constraint firstAttribute="bottom" secondItem="Q2Y-jZ-HYD" secondAttribute="bottom" constant="8" id="7An-ri-zUq"/>
@@ -193,14 +169,10 @@
                 <constraint firstItem="nSa-pg-Itd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="TNv-cf-e2V">
                     <variation key="widthClass=compact" constant="0.0"/>
                 </constraint>
-                <constraint firstAttribute="bottom" secondItem="DtN-RE-Uwg" secondAttribute="bottom" constant="3" id="bhC-O5-5Qy">
-                    <variation key="widthClass=compact" constant="8"/>
-                </constraint>
                 <constraint firstAttribute="bottom" secondItem="Laz-WV-Mwx" secondAttribute="bottom" constant="85" id="ctZ-zn-5Xu"/>
                 <constraint firstItem="D3Y-uq-4Ai" firstAttribute="leading" secondItem="gFR-7j-3ut" secondAttribute="trailing" constant="6" id="hCI-gp-7eA">
                     <variation key="widthClass=compact" constant="8"/>
                 </constraint>
-                <constraint firstAttribute="trailing" secondItem="DtN-RE-Uwg" secondAttribute="trailing" constant="8" id="iwX-xK-bIj"/>
                 <constraint firstItem="Laz-WV-Mwx" firstAttribute="leading" secondItem="D3Y-uq-4Ai" secondAttribute="trailing" constant="8" id="pdf-3F-iZy"/>
                 <constraint firstItem="LfJ-mY-Dly" firstAttribute="top" secondItem="Og4-5b-88s" secondAttribute="bottom" constant="55" id="vTz-Oc-5S2">
                     <variation key="widthClass=compact" constant="47"/>
@@ -217,7 +189,6 @@
                     <exclude reference="zfr-vX-7Fc"/>
                     <exclude reference="LfJ-mY-Dly"/>
                     <exclude reference="nSa-pg-Itd"/>
-                    <exclude reference="DtN-RE-Uwg"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="NgC-my-bma"/>
@@ -237,8 +208,6 @@
                     <exclude reference="pdf-3F-iZy"/>
                     <exclude reference="7An-ri-zUq"/>
                     <exclude reference="8Bc-Pv-CXp"/>
-                    <exclude reference="bhC-O5-5Qy"/>
-                    <exclude reference="iwX-xK-bIj"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -251,7 +220,6 @@
                     <include reference="zfr-vX-7Fc"/>
                     <include reference="LfJ-mY-Dly"/>
                     <include reference="nSa-pg-Itd"/>
-                    <include reference="DtN-RE-Uwg"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="NgC-my-bma"/>
@@ -271,15 +239,12 @@
                     <include reference="pdf-3F-iZy"/>
                     <include reference="7An-ri-zUq"/>
                     <include reference="8Bc-Pv-CXp"/>
-                    <include reference="bhC-O5-5Qy"/>
-                    <include reference="iwX-xK-bIj"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="223" y="277"/>
         </view>
     </objects>
     <resources>
-        <image name="blue-btn" width="236" height="76"/>
         <image name="green-btn" width="172" height="91"/>
         <image name="red-btn" width="97" height="62"/>
     </resources>

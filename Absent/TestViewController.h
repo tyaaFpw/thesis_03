@@ -14,6 +14,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *startBtn;
 @property (weak, nonatomic) IBOutlet UILabel *rateValLbl;
 @property (weak, nonatomic) IBOutlet UIButton *saveBtn;
-@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 
 @end

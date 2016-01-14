@@ -57,6 +57,14 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
     [self pause];
 }
 
+- (IBAction)backToPreviousPage:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)savingDetection:(id)sender {
+}
+
 - (void)settingUpDetectionModel {
     self.filter = [[Filter alloc]init];
     self.pulseDetector = [[PulseDetector alloc]init];
@@ -351,12 +359,6 @@ void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v ) {
 }
 
 - (IBAction)cancellingTheOperation:(id)sender {
-}
-
-- (IBAction)backToPreviousPage:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"TEST");
-    }];
 }
 
 
