@@ -38,6 +38,10 @@
     self.transform = CGAffineTransformMakeRotation(M_PI/8);
 }
 
+- (IBAction)backToPreviousPage:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

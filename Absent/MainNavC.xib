@@ -121,7 +121,7 @@
                         <constraint firstAttribute="height" constant="79" id="X2C-8P-SGV"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
-                    <state key="normal" title="Pedometer" backgroundImage="green-btn">
+                    <state key="normal" title="Run Counter" backgroundImage="green-btn">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>

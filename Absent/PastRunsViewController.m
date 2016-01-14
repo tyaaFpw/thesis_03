@@ -47,4 +47,8 @@
     }
 }
 
+- (IBAction)backToPerviousPage:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

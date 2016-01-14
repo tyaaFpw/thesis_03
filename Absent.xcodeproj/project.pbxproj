@@ -357,13 +357,6 @@
 			name = HeartRate;
 			sourceTree = "<group>";
 		};
-		2D539AA11C06AAB6000F472F /* MyHistory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MyHistory;
-			sourceTree = "<group>";
-		};
 		2D539AA21C06AC83000F472F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,7 +424,6 @@
 			isa = PBXGroup;
 			children = (
 				2D539AA21C06AC83000F472F /* CoreData */,
-				2D539AA11C06AAB6000F472F /* MyHistory */,
 				2D539AA01C06AAA7000F472F /* HeartRate */,
 				2D539A9F1C06AA94000F472F /* Pedometer */,
 				2DFDA1831BF07438006D938B /* AppDelegate.h */,

@@ -70,6 +70,10 @@
 
 #pragma mark - IBActions
 
+- (IBAction)backToPreviousPage:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)infoButtonPressed:(UIButton *)sender {
     UIAlertView *alertView = [[UIAlertView alloc]
                               initWithTitle:self.earnStatus.badge.name

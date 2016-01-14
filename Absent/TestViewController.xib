@@ -24,46 +24,80 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2Y-jZ-HYD">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Save">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="112" id="H3F-Jg-tUP"/>
+                        <constraint firstAttribute="height" constant="34" id="oid-PM-TtU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                    <state key="normal" title="Save" backgroundImage="green-btn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="H3F-Jg-tUP"/>
+                            <exclude reference="oid-PM-TtU"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="H3F-Jg-tUP"/>
+                            <include reference="oid-PM-TtU"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="savingTheOperation:" destination="-1" eventType="touchUpInside" id="PxW-MX-Xxa"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtN-RE-Uwg">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <color key="backgroundColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Cancel">
-                        <color key="titleShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="cancellingTheOperation:" destination="-1" eventType="touchUpInside" id="LUO-f2-z3r"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="captured frame:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFR-7j-3ut">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3Y-uq-4Ai">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Laz-WV-Mwx">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please put your finger on the camera Lens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Og4-5b-88s">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfr-vX-7Fc">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Start"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="O8D-eP-3np"/>
+                        <constraint firstAttribute="height" constant="56" id="tgn-tb-nz2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                    <state key="normal" title="Start" backgroundImage="red-btn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="O8D-eP-3np"/>
+                            <exclude reference="tgn-tb-nz2"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="O8D-eP-3np"/>
+                            <include reference="tgn-tb-nz2"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="startTheOperation:" destination="-1" eventType="touchUpInside" id="WTe-ES-bw0"/>
                     </connections>
@@ -89,28 +123,66 @@
                 </imageView>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSa-pg-Itd">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                        <color key="textColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="HeartRateCounter" id="L6l-TA-3T7">
-                            <barButtonItem key="leftBarButtonItem" title="Back" id="lBz-6A-Yrr"/>
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="lBz-6A-Yrr">
+                                <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please put your finger on the camera Lens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Og4-5b-88s">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtN-RE-Uwg">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="OzK-j0-TYK"/>
+                        <constraint firstAttribute="width" constant="112" id="nd2-xJ-aKn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                    <state key="normal" title="Cancel" backgroundImage="blue-btn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="OzK-j0-TYK"/>
+                            <exclude reference="nd2-xJ-aKn"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="OzK-j0-TYK"/>
+                            <include reference="nd2-xJ-aKn"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="cancellingTheOperation:" destination="-1" eventType="touchUpInside" id="LUO-f2-z3r"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="LfJ-mY-Dly" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="136" id="0Ti-mw-Pbb"/>
-                <constraint firstAttribute="bottom" secondItem="Q2Y-jZ-HYD" secondAttribute="bottom" constant="3" id="3DI-Tg-GyU"/>
+                <constraint firstAttribute="bottom" secondItem="Q2Y-jZ-HYD" secondAttribute="bottom" constant="8" id="7An-ri-zUq"/>
+                <constraint firstItem="Q2Y-jZ-HYD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="8Bc-Pv-CXp"/>
                 <constraint firstItem="gFR-7j-3ut" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="DKc-CM-z0d"/>
-                <constraint firstItem="zfr-vX-7Fc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="178" id="Dn3-ED-SD5"/>
-                <constraint firstItem="Og4-5b-88s" firstAttribute="top" secondItem="nSa-pg-Itd" secondAttribute="bottom" constant="90" id="IJm-dT-mDo"/>
-                <constraint firstItem="Og4-5b-88s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="39" id="K15-UM-Zf3"/>
-                <constraint firstItem="zfr-vX-7Fc" firstAttribute="top" secondItem="LfJ-mY-Dly" secondAttribute="bottom" constant="48" id="KWR-AY-43S"/>
+                <constraint firstItem="zfr-vX-7Fc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="178" id="Dn3-ED-SD5">
+                    <variation key="widthClass=compact" constant="125"/>
+                </constraint>
+                <constraint firstItem="Og4-5b-88s" firstAttribute="top" secondItem="nSa-pg-Itd" secondAttribute="bottom" constant="90" id="IJm-dT-mDo">
+                    <variation key="widthClass=compact" constant="98"/>
+                </constraint>
+                <constraint firstItem="Og4-5b-88s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="39" id="K15-UM-Zf3">
+                    <variation key="widthClass=compact" constant="24"/>
+                </constraint>
+                <constraint firstItem="zfr-vX-7Fc" firstAttribute="top" secondItem="LfJ-mY-Dly" secondAttribute="bottom" constant="48" id="KWR-AY-43S">
+                    <variation key="widthClass=compact" constant="42"/>
+                </constraint>
                 <constraint firstAttribute="bottom" secondItem="gFR-7j-3ut" secondAttribute="bottom" constant="85" id="L0S-ai-wUW"/>
                 <constraint firstItem="nSa-pg-Itd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="NgC-my-bma">
                     <variation key="widthClass=compact" constant="0.0"/>
@@ -121,26 +193,31 @@
                 <constraint firstItem="nSa-pg-Itd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="TNv-cf-e2V">
                     <variation key="widthClass=compact" constant="0.0"/>
                 </constraint>
-                <constraint firstItem="DtN-RE-Uwg" firstAttribute="leading" secondItem="Q2Y-jZ-HYD" secondAttribute="trailing" constant="16" id="ZBa-4p-sFg"/>
-                <constraint firstAttribute="bottom" secondItem="DtN-RE-Uwg" secondAttribute="bottom" constant="3" id="bhC-O5-5Qy"/>
+                <constraint firstAttribute="bottom" secondItem="DtN-RE-Uwg" secondAttribute="bottom" constant="3" id="bhC-O5-5Qy">
+                    <variation key="widthClass=compact" constant="8"/>
+                </constraint>
                 <constraint firstAttribute="bottom" secondItem="Laz-WV-Mwx" secondAttribute="bottom" constant="85" id="ctZ-zn-5Xu"/>
-                <constraint firstItem="D3Y-uq-4Ai" firstAttribute="leading" secondItem="gFR-7j-3ut" secondAttribute="trailing" constant="6" id="hCI-gp-7eA"/>
+                <constraint firstItem="D3Y-uq-4Ai" firstAttribute="leading" secondItem="gFR-7j-3ut" secondAttribute="trailing" constant="6" id="hCI-gp-7eA">
+                    <variation key="widthClass=compact" constant="8"/>
+                </constraint>
                 <constraint firstAttribute="trailing" secondItem="DtN-RE-Uwg" secondAttribute="trailing" constant="8" id="iwX-xK-bIj"/>
                 <constraint firstItem="Laz-WV-Mwx" firstAttribute="leading" secondItem="D3Y-uq-4Ai" secondAttribute="trailing" constant="8" id="pdf-3F-iZy"/>
-                <constraint firstItem="LfJ-mY-Dly" firstAttribute="top" secondItem="Og4-5b-88s" secondAttribute="bottom" constant="55" id="vTz-Oc-5S2"/>
+                <constraint firstItem="LfJ-mY-Dly" firstAttribute="top" secondItem="Og4-5b-88s" secondAttribute="bottom" constant="55" id="vTz-Oc-5S2">
+                    <variation key="widthClass=compact" constant="47"/>
+                </constraint>
                 <constraint firstAttribute="bottom" secondItem="D3Y-uq-4Ai" secondAttribute="bottom" constant="85" id="y3V-L2-enF"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="Q2Y-jZ-HYD"/>
-                    <exclude reference="DtN-RE-Uwg"/>
                     <exclude reference="gFR-7j-3ut"/>
                     <exclude reference="D3Y-uq-4Ai"/>
                     <exclude reference="Laz-WV-Mwx"/>
+                    <exclude reference="Og4-5b-88s"/>
                     <exclude reference="zfr-vX-7Fc"/>
                     <exclude reference="LfJ-mY-Dly"/>
                     <exclude reference="nSa-pg-Itd"/>
-                    <exclude reference="Og4-5b-88s"/>
+                    <exclude reference="DtN-RE-Uwg"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="NgC-my-bma"/>
@@ -158,8 +235,8 @@
                     <exclude reference="y3V-L2-enF"/>
                     <exclude reference="ctZ-zn-5Xu"/>
                     <exclude reference="pdf-3F-iZy"/>
-                    <exclude reference="3DI-Tg-GyU"/>
-                    <exclude reference="ZBa-4p-sFg"/>
+                    <exclude reference="7An-ri-zUq"/>
+                    <exclude reference="8Bc-Pv-CXp"/>
                     <exclude reference="bhC-O5-5Qy"/>
                     <exclude reference="iwX-xK-bIj"/>
                 </mask>
@@ -167,14 +244,14 @@
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="Q2Y-jZ-HYD"/>
-                    <include reference="DtN-RE-Uwg"/>
                     <include reference="gFR-7j-3ut"/>
                     <include reference="D3Y-uq-4Ai"/>
                     <include reference="Laz-WV-Mwx"/>
+                    <include reference="Og4-5b-88s"/>
                     <include reference="zfr-vX-7Fc"/>
                     <include reference="LfJ-mY-Dly"/>
                     <include reference="nSa-pg-Itd"/>
-                    <include reference="Og4-5b-88s"/>
+                    <include reference="DtN-RE-Uwg"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="NgC-my-bma"/>
@@ -192,8 +269,8 @@
                     <include reference="y3V-L2-enF"/>
                     <include reference="ctZ-zn-5Xu"/>
                     <include reference="pdf-3F-iZy"/>
-                    <include reference="3DI-Tg-GyU"/>
-                    <include reference="ZBa-4p-sFg"/>
+                    <include reference="7An-ri-zUq"/>
+                    <include reference="8Bc-Pv-CXp"/>
                     <include reference="bhC-O5-5Qy"/>
                     <include reference="iwX-xK-bIj"/>
                 </mask>
@@ -201,4 +278,9 @@
             <point key="canvasLocation" x="223" y="277"/>
         </view>
     </objects>
+    <resources>
+        <image name="blue-btn" width="236" height="76"/>
+        <image name="green-btn" width="172" height="91"/>
+        <image name="red-btn" width="97" height="62"/>
+    </resources>
 </document>

@@ -37,6 +37,10 @@ static float const mapPadding = 1.1f;
 
 #pragma mark - IBActions
 
+- (IBAction)backToPreviousPage:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(IBAction)displayModeToggled:(UISwitch *)sender
 {
     self.badgeImageView.hidden = !sender.isOn;

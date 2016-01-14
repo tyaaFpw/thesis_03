@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--RunCounter Home-->
         <scene sceneID="2Uk-zt-oHm">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="ApA-oN-WYB" customClass="HomeViewController" sceneMemberID="viewController">
@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="E7g-pB-Xwd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9cx-ca-EoG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRx-fQ-fDU">
-                                <rect key="frame" x="38" y="324" width="236" height="76"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRx-fQ-fDU">
+                                <rect key="frame" x="42" y="260" width="236" height="76"/>
                                 <color key="backgroundColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                 <state key="normal" title="Run History" backgroundImage="blue-btn">
@@ -30,8 +30,8 @@
                                     <segue destination="pGg-6v-bdr" kind="push" id="CFt-RM-Uta"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhm-BQ-cu8">
-                                <rect key="frame" x="38" y="423" width="236" height="76"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhm-BQ-cu8">
+                                <rect key="frame" x="42" y="359" width="236" height="76"/>
                                 <color key="backgroundColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
                                 <state key="normal" title="Run Badges" backgroundImage="blue-btn">
@@ -42,8 +42,8 @@
                                     <segue destination="CGm-zh-iTG" kind="push" id="yrl-J6-C9x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH5-mX-nO0">
-                                <rect key="frame" x="34" y="211" width="236" height="91"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH5-mX-nO0">
+                                <rect key="frame" x="42" y="147" width="236" height="91"/>
                                 <color key="backgroundColor" red="0.97058753269999998" green="0.97908775250000002" blue="0.81769653799999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="6mx-pt-rfL"/>
@@ -58,8 +58,8 @@
                                     <segue destination="IT2-8f-7aj" kind="push" id="nnh-8H-ORk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to RunCounter!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="196" translatesAutoresizingMaskIntoConstraints="NO" id="cw4-mk-z52">
-                                <rect key="frame" x="65" y="92" width="191" height="72"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to RunCounter!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="196" translatesAutoresizingMaskIntoConstraints="NO" id="cw4-mk-z52">
+                                <rect key="frame" x="64" y="28" width="191" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="191" id="gsa-Dp-RgF"/>
                                     <constraint firstAttribute="height" constant="72" id="ow7-LF-ydb"/>
@@ -72,23 +72,25 @@
                         </subviews>
                         <color key="backgroundColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="cw4-mk-z52" firstAttribute="leading" secondItem="9cx-ca-EoG" secondAttribute="leadingMargin" constant="45" id="6dG-1N-Lqy"/>
+                            <constraint firstItem="LRx-fQ-fDU" firstAttribute="centerX" secondItem="OH5-mX-nO0" secondAttribute="centerX" id="9HR-Yd-NoC"/>
+                            <constraint firstItem="cw4-mk-z52" firstAttribute="centerX" secondItem="9cx-ca-EoG" secondAttribute="centerX" id="J8a-mT-GmF"/>
                             <constraint firstItem="cw4-mk-z52" firstAttribute="top" secondItem="QtK-XB-awv" secondAttribute="bottom" constant="28" id="JgW-TT-NCO"/>
                             <constraint firstItem="uhm-BQ-cu8" firstAttribute="top" secondItem="LRx-fQ-fDU" secondAttribute="bottom" constant="23" id="KhD-vS-QaG"/>
-                            <constraint firstItem="LRx-fQ-fDU" firstAttribute="leading" secondItem="9cx-ca-EoG" secondAttribute="leadingMargin" constant="18" id="Lo1-ok-AVM"/>
                             <constraint firstItem="OH5-mX-nO0" firstAttribute="top" secondItem="cw4-mk-z52" secondAttribute="bottom" constant="47" id="SbB-2d-bcq"/>
-                            <constraint firstItem="OH5-mX-nO0" firstAttribute="leading" secondItem="9cx-ca-EoG" secondAttribute="leadingMargin" constant="14" id="UKx-4A-OKC"/>
-                            <constraint firstItem="uhm-BQ-cu8" firstAttribute="leading" secondItem="9cx-ca-EoG" secondAttribute="leadingMargin" constant="18" id="cUc-dD-BqD"/>
+                            <constraint firstItem="OH5-mX-nO0" firstAttribute="centerX" secondItem="cw4-mk-z52" secondAttribute="centerX" id="d38-3y-POm"/>
                             <constraint firstItem="LRx-fQ-fDU" firstAttribute="top" secondItem="OH5-mX-nO0" secondAttribute="bottom" constant="22" id="q2j-jf-FJH"/>
+                            <constraint firstItem="uhm-BQ-cu8" firstAttribute="centerX" secondItem="LRx-fQ-fDU" secondAttribute="centerX" id="zaQ-bl-HgE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NZ0-tQ-fQG">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Yh4-SJ-DU5">
-                            <color key="tintColor" red="0.21001653149999999" green="0.163678926" blue="0.97908775250000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <navigationItem key="navigationItem" title="RunCounter Home" id="NZ0-tQ-fQG">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="wvA-dK-XmT">
+                            <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backToAppsMainMenu:" destination="ApA-oN-WYB" id="pId-tW-6nN"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="wvA-dK-XmT"/>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20T-qI-lpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +105,7 @@
                         <viewControllerLayoutGuide type="bottom" id="n0y-ga-mqc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="K4j-hp-X0h">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22j-y4-Kbu">
@@ -178,9 +180,11 @@
                         <color key="backgroundColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Run" id="MJ0-T7-r1w">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="blx-Kd-Tdf"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="RTs-4f-lmc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="RTs-4f-lmc">
+                            <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="distLabel" destination="JHx-qI-3px" id="9eY-YH-4sI"/>
                         <outlet property="mapView" destination="rbc-Ma-DuU" id="1Wv-yj-aFY"/>
@@ -203,13 +207,13 @@
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="PastRunsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RunCell" rowHeight="80" id="m0d-ak-lc9" customClass="RunCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="80"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
@@ -269,8 +273,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Past Runs" id="tQt-TN-PWz">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="QRV-cO-rJ4"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="QRV-cO-rJ4">
+                            <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backToPerviousPage:" destination="pGg-6v-bdr" id="q32-MC-qar"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,13 +291,13 @@
             <objects>
                 <tableViewController id="CGm-zh-iTG" customClass="BadgesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="xWw-MH-vhH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BadgeCell" rowHeight="80" id="1jR-Y2-6hf" customClass="BadgeCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="80"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1jR-Y2-6hf" id="c6f-HO-ojl">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
@@ -333,8 +343,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Badges" id="4WB-Dj-u0v">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="0fO-fL-JQd"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="0fO-fL-JQd">
+                            <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backToPreviousPage:" destination="CGm-zh-iTG" id="bhf-ls-f11"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzP-1J-oxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -349,7 +365,7 @@
                         <viewControllerLayoutGuide type="bottom" id="74p-QR-cwN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f8Q-Zw-XEB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26n-QR-KDn">
@@ -410,8 +426,14 @@
                         <color key="backgroundColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="At4-32-Bb8">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="F7L-ky-yAH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="F7L-ky-yAH">
+                            <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backToPreviousPage:" destination="mC5-4M-enl" id="hFX-uW-WE1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="badgeImageView" destination="26n-QR-KDn" id="0kQ-qk-cZy"/>
                         <outlet property="bestLabel" destination="gZC-Fn-sdI" id="PBd-3S-ERG"/>
@@ -437,7 +459,7 @@
                         <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-S6-PUA">
@@ -500,8 +522,14 @@
                         <color key="backgroundColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Run" id="uoN-sX-iAF">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="bQ9-8J-MMk"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="bQ9-8J-MMk">
+                            <color key="tintColor" red="0.33725490200000002" green="0.67450980390000004" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backToPreviousPage:" destination="Ah7-4n-0Wa" id="yKc-mZ-RMW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="badgeImageView" destination="nW7-e9-7A1" id="Xja-z6-3vd"/>
                         <outlet property="dateLabel" destination="Etg-7D-Zd7" id="aWF-W2-Emf"/>
@@ -521,7 +549,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g5R-Hq-IHg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MZM-q2-tlk">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MZM-q2-tlk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -546,6 +575,6 @@
         <image name="spaceship-silver" width="50" height="68"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NtA-Fc-TxQ"/>
+        <segue reference="jUr-3t-vfg"/>
     </inferredMetricsTieBreakers>
 </document>

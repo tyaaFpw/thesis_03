@@ -25,6 +25,32 @@
 
 #pragma mark - Lifecycle
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    //[self setUpNavigationBar];
+}
+
+- (void)setUpNavigationBar
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"aaa";
+    label.backgroundColor = [UIColor clearColor];
+    
+    self.navigationItem.titleView = label;
+    
+    UIButton *button = [[UIButton alloc] init];
+    button.titleLabel.text = @"Back";
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+
+- (IBAction)backToAppsMainMenu:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

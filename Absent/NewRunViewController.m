@@ -16,6 +16,7 @@
 #import "RunDetailsViewController.h"
 #import "BadgeController.h"
 #import "Badge.h"
+#import "MainNavC.h"
 
 static NSString * const detailSegueName = @"NewRunDetails";
 
@@ -28,6 +29,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) Run *run;
 @property (nonatomic, strong) Badge *upcomingBadge;
+@property (nonatomic, strong) MainNavC *mainHome;
 
 @property (nonatomic, weak) IBOutlet UILabel *promptLabel;
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
@@ -233,7 +235,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
         
     // discard
     } else if (buttonIndex == 1) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:self.mainHome];
     }
 }
 
