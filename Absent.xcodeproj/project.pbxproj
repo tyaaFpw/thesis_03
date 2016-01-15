@@ -66,8 +66,6 @@
 		2D531B6D1C43AC040058FBF2 /* Run+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B641C43AC040058FBF2 /* Run+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		2D531B6E1C43AC040058FBF2 /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B661C43AC040058FBF2 /* Location+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		2D531B721C43B4CC0058FBF2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D531B701C43B4CC0058FBF2 /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		2D539A9E1C06AA77000F472F /* PedoHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		2DFDA1821BF07438006D938B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1811BF07438006D938B /* main.m */; };
 		2DFDA1851BF07438006D938B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDA1841BF07438006D938B /* AppDelegate.m */; };
 		2DFDA18D1BF07438006D938B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFDA18C1BF07438006D938B /* Assets.xcassets */; };
@@ -184,9 +182,6 @@
 		2D531B661C43AC040058FBF2 /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2D531B6F1C43AFAE0058FBF2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2D531B711C43B4CC0058FBF2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		2D539A9A1C06AA77000F472F /* PedoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedoHomeViewController.h; sourceTree = "<group>"; };
-		2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedoHomeViewController.m; sourceTree = "<group>"; };
-		2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PedoHomeViewController.xib; sourceTree = "<group>"; };
 		2DFDA17D1BF07438006D938B /* Absent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Absent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFDA1811BF07438006D938B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DFDA1831BF07438006D938B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -336,9 +331,6 @@
 				2D531B421C43618F0058FBF2 /* View */,
 				2D531B2F1C4361730058FBF2 /* ViewController */,
 				2D539AB31C06BA49000F472F /* Calculation */,
-				2D539A9A1C06AA77000F472F /* PedoHomeViewController.h */,
-				2D539A9B1C06AA77000F472F /* PedoHomeViewController.m */,
-				2D539A9C1C06AA77000F472F /* PedoHomeViewController.xib */,
 			);
 			name = Pedometer;
 			sourceTree = "<group>";
@@ -648,7 +640,6 @@
 				2D531B2C1C435E5D0058FBF2 /* umbriel.jpg in Resources */,
 				2D531B111C435E5D0058FBF2 /* magnetotail.png in Resources */,
 				2DFDA1C11BF1D5E7006D938B /* LoginVC.xib in Resources */,
-				2D539A9E1C06AA77000F472F /* PedoHomeViewController.xib in Resources */,
 				2D531B121C435E5D0058FBF2 /* ariel.jpg in Resources */,
 				2D531B191C435E5D0058FBF2 /* enceladus.jpg in Resources */,
 				2D531B251C435E5D0058FBF2 /* pluto.jpg in Resources */,
@@ -744,7 +735,6 @@
 				2D15DA671C229EC6009E00E8 /* Filter.m in Sources */,
 				2D531B3E1C4361840058FBF2 /* PastRunsViewController.m in Sources */,
 				2DFDA1CC1BF1E807006D938B /* MainNavC.m in Sources */,
-				2D539A9D1C06AA77000F472F /* PedoHomeViewController.m in Sources */,
 				2D531B721C43B4CC0058FBF2 /* Model.xcdatamodeld in Sources */,
 				2D531B3D1C4361840058FBF2 /* NewRunViewController.m in Sources */,
 				2D531B491C43619F0058FBF2 /* RunCell.m in Sources */,
