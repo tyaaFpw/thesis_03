@@ -66,6 +66,10 @@ static NSString * const detailSegueName = @"NewRunDetails";
     self.mapView.hidden = YES;
 }
 
+- (IBAction)backToPreviousPage:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void) viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];

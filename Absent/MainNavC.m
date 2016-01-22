@@ -8,7 +8,7 @@
 
 #import "MainNavC.h"
 #import "LoginVC.h"
-#import "PedoHomeViewController.h"
+//#import "PedoHomeViewController.h"
 #import "TestViewController.h"
 #import "HomeViewController.h"
 #import <CoreData/CoreData.h>
@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) LoginVC *loginVC;
 @property (nonatomic, strong) UIImage *image;
-@property (nonatomic, strong) PedoHomeViewController *pedometerVC;
+//@property (nonatomic, strong) PedoHomeViewController *pedometerVC;
 @property (nonatomic, strong) TestViewController *testVC;
 @property (nonatomic, strong) HomeViewController *runHome;
 
