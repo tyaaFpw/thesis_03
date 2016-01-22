@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestViewController : UIViewController
+@interface HeartRateViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *detectInfoLbl;
 @property (weak, nonatomic) IBOutlet UIImageView *infoImgView;
 @property (weak, nonatomic) IBOutlet UIButton *startBtn;

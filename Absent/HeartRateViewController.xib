@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeartRateViewController">
             <connections>
                 <outlet property="detectInfoLbl" destination="Og4-5b-88s" id="7lR-iV-JvR"/>
                 <outlet property="infoImgView" destination="LfJ-mY-Dly" id="pB7-Bf-0Ia"/>
@@ -191,23 +190,23 @@
                     <exclude reference="nSa-pg-Itd"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="NgC-my-bma"/>
-                    <exclude reference="TES-qW-Gd4"/>
-                    <exclude reference="TNv-cf-e2V"/>
-                    <exclude reference="IJm-dT-mDo"/>
-                    <exclude reference="K15-UM-Zf3"/>
-                    <exclude reference="0Ti-mw-Pbb"/>
-                    <exclude reference="vTz-Oc-5S2"/>
+                    <exclude reference="7An-ri-zUq"/>
+                    <exclude reference="8Bc-Pv-CXp"/>
                     <exclude reference="Dn3-ED-SD5"/>
                     <exclude reference="KWR-AY-43S"/>
-                    <exclude reference="DKc-CM-z0d"/>
-                    <exclude reference="L0S-ai-wUW"/>
                     <exclude reference="hCI-gp-7eA"/>
                     <exclude reference="y3V-L2-enF"/>
                     <exclude reference="ctZ-zn-5Xu"/>
                     <exclude reference="pdf-3F-iZy"/>
-                    <exclude reference="7An-ri-zUq"/>
-                    <exclude reference="8Bc-Pv-CXp"/>
+                    <exclude reference="IJm-dT-mDo"/>
+                    <exclude reference="K15-UM-Zf3"/>
+                    <exclude reference="DKc-CM-z0d"/>
+                    <exclude reference="L0S-ai-wUW"/>
+                    <exclude reference="NgC-my-bma"/>
+                    <exclude reference="TES-qW-Gd4"/>
+                    <exclude reference="TNv-cf-e2V"/>
+                    <exclude reference="0Ti-mw-Pbb"/>
+                    <exclude reference="vTz-Oc-5S2"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -222,23 +221,23 @@
                     <include reference="nSa-pg-Itd"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="NgC-my-bma"/>
-                    <include reference="TES-qW-Gd4"/>
-                    <include reference="TNv-cf-e2V"/>
-                    <include reference="IJm-dT-mDo"/>
-                    <include reference="K15-UM-Zf3"/>
-                    <include reference="0Ti-mw-Pbb"/>
-                    <include reference="vTz-Oc-5S2"/>
+                    <include reference="7An-ri-zUq"/>
+                    <include reference="8Bc-Pv-CXp"/>
                     <include reference="Dn3-ED-SD5"/>
                     <include reference="KWR-AY-43S"/>
-                    <include reference="DKc-CM-z0d"/>
-                    <include reference="L0S-ai-wUW"/>
                     <include reference="hCI-gp-7eA"/>
                     <include reference="y3V-L2-enF"/>
                     <include reference="ctZ-zn-5Xu"/>
                     <include reference="pdf-3F-iZy"/>
-                    <include reference="7An-ri-zUq"/>
-                    <include reference="8Bc-Pv-CXp"/>
+                    <include reference="IJm-dT-mDo"/>
+                    <include reference="K15-UM-Zf3"/>
+                    <include reference="DKc-CM-z0d"/>
+                    <include reference="L0S-ai-wUW"/>
+                    <include reference="NgC-my-bma"/>
+                    <include reference="TES-qW-Gd4"/>
+                    <include reference="TNv-cf-e2V"/>
+                    <include reference="0Ti-mw-Pbb"/>
+                    <include reference="vTz-Oc-5S2"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="223" y="277"/>

@@ -9,7 +9,7 @@
 #import "MainNavC.h"
 #import "LoginVC.h"
 //#import "PedoHomeViewController.h"
-#import "TestViewController.h"
+#import "HeartRateViewController.h"
 #import "HomeViewController.h"
 #import <CoreData/CoreData.h>
 
@@ -18,7 +18,7 @@
 @property (nonatomic, strong) LoginVC *loginVC;
 @property (nonatomic, strong) UIImage *image;
 //@property (nonatomic, strong) PedoHomeViewController *pedometerVC;
-@property (nonatomic, strong) TestViewController *testVC;
+@property (nonatomic, strong) HeartRateViewController *testVC;
 @property (nonatomic, strong) HomeViewController *runHome;
 
 @end
@@ -85,7 +85,7 @@
 //    self.heartScreen = [[HeartCameraScreen alloc]initWithNibName:@"HeartCameraScreen" bundle:nil];
 //    [self presentViewController:self.heartScreen animated:YES completion:nil];
     
-    self.testVC = [[TestViewController alloc]initWithNibName:@"TestViewController" bundle:nil];
+    self.testVC = [[HeartRateViewController alloc]initWithNibName:@"TestViewController" bundle:nil];
     [self presentViewController:self.testVC animated:YES completion:nil];
 }
 

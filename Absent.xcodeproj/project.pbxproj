@@ -12,8 +12,8 @@
 		2D15DA681C229EC6009E00E8 /* PulseDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA661C229EC6009E00E8 /* PulseDetector.mm */; };
 		2D15DA6B1C229EF3009E00E8 /* Black1_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA691C229EF3009E00E8 /* Black1_heart.png */; };
 		2D15DA6C1C229EF3009E00E8 /* Red_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6A1C229EF3009E00E8 /* Red_heart.png */; };
-		2D15DA701C22BE9B009E00E8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */; };
-		2D15DA711C22BE9B009E00E8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */; };
+		2D15DA701C22BE9B009E00E8 /* HeartRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15DA6E1C22BE9B009E00E8 /* HeartRateViewController.m */; };
+		2D15DA711C22BE9B009E00E8 /* HeartRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D15DA6F1C22BE9B009E00E8 /* HeartRateViewController.xib */; };
 		2D531ADA1C435DE30058FBF2 /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531AD71C435DE30058FBF2 /* MathController.m */; };
 		2D531ADB1C435DE30058FBF2 /* BadgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D531AD91C435DE30058FBF2 /* BadgeController.m */; };
 		2D531B0E1C435E5D0058FBF2 /* badges.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2D531AEF1C435E5D0058FBF2 /* badges.txt */; };
@@ -109,9 +109,9 @@
 		2D15DA661C229EC6009E00E8 /* PulseDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PulseDetector.mm; sourceTree = "<group>"; };
 		2D15DA691C229EF3009E00E8 /* Black1_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black1_heart.png; sourceTree = "<group>"; };
 		2D15DA6A1C229EF3009E00E8 /* Red_heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red_heart.png; sourceTree = "<group>"; };
-		2D15DA6D1C22BE9B009E00E8 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		2D15DA6D1C22BE9B009E00E8 /* HeartRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRateViewController.h; sourceTree = "<group>"; };
+		2D15DA6E1C22BE9B009E00E8 /* HeartRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRateViewController.m; sourceTree = "<group>"; };
+		2D15DA6F1C22BE9B009E00E8 /* HeartRateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeartRateViewController.xib; sourceTree = "<group>"; };
 		2D531AD61C435DE30058FBF2 /* MathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathController.h; sourceTree = "<group>"; };
 		2D531AD71C435DE30058FBF2 /* MathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathController.m; sourceTree = "<group>"; };
 		2D531AD81C435DE30058FBF2 /* BadgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeController.h; sourceTree = "<group>"; };
@@ -344,9 +344,9 @@
 				2D15DA641C229EC6009E00E8 /* Filter.m */,
 				2D15DA651C229EC6009E00E8 /* PulseDetector.h */,
 				2D15DA661C229EC6009E00E8 /* PulseDetector.mm */,
-				2D15DA6D1C22BE9B009E00E8 /* TestViewController.h */,
-				2D15DA6E1C22BE9B009E00E8 /* TestViewController.m */,
-				2D15DA6F1C22BE9B009E00E8 /* TestViewController.xib */,
+				2D15DA6D1C22BE9B009E00E8 /* HeartRateViewController.h */,
+				2D15DA6E1C22BE9B009E00E8 /* HeartRateViewController.m */,
+				2D15DA6F1C22BE9B009E00E8 /* HeartRateViewController.xib */,
 			);
 			name = HeartRate;
 			sourceTree = "<group>";
@@ -612,7 +612,7 @@
 				2D531B2A1C435E5D0058FBF2 /* titania.jpg in Resources */,
 				2D531B181C435E5D0058FBF2 /* earth.jpg in Resources */,
 				2D531B571C43AA270058FBF2 /* Main.storyboard in Resources */,
-				2D15DA711C22BE9B009E00E8 /* TestViewController.xib in Resources */,
+				2D15DA711C22BE9B009E00E8 /* HeartRateViewController.xib in Resources */,
 				2DFDA1D11BF1ECF3006D938B /* no_wifi.png in Resources */,
 				2D531B231C435E5D0058FBF2 /* oberon.jpg in Resources */,
 				2DFDA1D81BF1F2B2006D938B /* back.png in Resources */,
@@ -743,7 +743,7 @@
 				2D531B3D1C4361840058FBF2 /* NewRunViewController.m in Sources */,
 				2D531B491C43619F0058FBF2 /* RunCell.m in Sources */,
 				2D531B6A1C43AC040058FBF2 /* BadgeEarnStatus.m in Sources */,
-				2D15DA701C22BE9B009E00E8 /* TestViewController.m in Sources */,
+				2D15DA701C22BE9B009E00E8 /* HeartRateViewController.m in Sources */,
 				2D531B3C1C4361840058FBF2 /* HomeViewController.m in Sources */,
 				2D531B681C43AC040058FBF2 /* Badge.m in Sources */,
 				2D531ADB1C435DE30058FBF2 /* BadgeController.m in Sources */,

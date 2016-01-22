@@ -6,10 +6,10 @@
 //  Copyright © 2015 Gratia. All rights reserved.
 //
 
-#import "TestViewController.h"
+#import "HeartRateViewController.h"
 #import "PulseDetector.h"
 #import "Filter.h"
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
 
@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
 
 #define MIN_FRAMES_FOR_FILTER_TO_SETTLE 10
 
-@interface TestViewController () <AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface HeartRateViewController () <AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (nonatomic, strong) AVCaptureDevice *camera;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, CURRENT_STATE) {
 
 @end
 
-@implementation TestViewController
+@implementation HeartRateViewController
 {
     BOOL TimerBool;
     NSTimer *timer;
