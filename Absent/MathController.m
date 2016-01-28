@@ -29,8 +29,6 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
         
         // to get from meters to kilometers divide by this
         unitDivider = metersInKM;
-        
-    // U.S.
     } else {
         
         unitName = @"mi";
@@ -95,8 +93,6 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
         
         // to get from meters to kilometers divide by this
         unitMultiplier = metersInKM;
-        
-    // U.S.
     } else {
         
         unitName = @"min/mi";
@@ -126,7 +122,7 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
         return @[segment];
     }    
     
-    // make array of all speeds
+    // create array of all speeds
     NSMutableArray *rawSpeeds = [NSMutableArray array];
     
     for (int i = 1; i < locations.count; i++) {
@@ -143,7 +139,7 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
         [rawSpeeds addObject:[NSNumber numberWithDouble:speed]];
     }
     
-    // smooth the raw speeds
+    // smoothing raw speeds
     NSMutableArray *smoothSpeeds = [NSMutableArray array];
     
     for (int i = 0; i < rawSpeeds.count; i++) {

@@ -26,8 +26,7 @@ float const goldMultiplier = 1.10;
 
 @implementation BadgeController
 
-+ (BadgeController *)defaultController
-{
++ (BadgeController *)defaultController {
     static BadgeController* controller = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -38,8 +37,7 @@ float const goldMultiplier = 1.10;
     return controller;
 }
 
-+ (NSArray *)badgeArray
-{
++ (NSArray *)badgeArray {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"badges" ofType:@"txt"];
     NSString *jsonContent = [NSString stringWithContentsOfFile:filePath usedEncoding:nil error:nil];
     NSData *data = [jsonContent dataUsingEncoding:NSUTF8StringEncoding];
@@ -54,8 +52,7 @@ float const goldMultiplier = 1.10;
     return badgeObjects;
 }
 
-+ (Badge *)badgeForDictionary:(NSDictionary *)dictionary
-{
++ (Badge *)badgeForDictionary:(NSDictionary *)dictionary {
     Badge *badge = [Badge new];
     badge.name = [dictionary objectForKey:@"name"];
     badge.information = [dictionary objectForKey:@"information"];
@@ -64,8 +61,7 @@ float const goldMultiplier = 1.10;
     return badge;
 }
 
-- (NSArray *)earnStatusesForRuns:(NSArray *)runs
-{
+- (NSArray *)earnStatusesForRuns:(NSArray *)runs {
     NSMutableArray *earnStatuses = [NSMutableArray array];
     
     for (Badge *badge in self.badges) {
@@ -77,7 +73,7 @@ float const goldMultiplier = 1.10;
             
             if (run.distance.floatValue > badge.distance) {
                 
-                // this is when the badge was first earned
+                // first earned
                 if (!earnStatus.earnRun) {
                     earnStatus.earnRun = run;
                 }
@@ -85,21 +81,21 @@ float const goldMultiplier = 1.10;
                 double earnRunSpeed = earnStatus.earnRun.distance.doubleValue / earnStatus.earnRun.duration.doubleValue;
                 double runSpeed = run.distance.doubleValue / run.duration.doubleValue;
                 
-                // does it deserve silver?
+                // silver
                 if (!earnStatus.silverRun
                     && runSpeed > earnRunSpeed * silverMultiplier) {
                     
                     earnStatus.silverRun = run;
                 }
                 
-                // does it deserve gold?
+                // gold
                 if (!earnStatus.goldRun
                     && runSpeed > earnRunSpeed * goldMultiplier) {
                     
                     earnStatus.goldRun = run;
                 }
                 
-                // is it the best for this distance?
+                // the best distance
                 if (!earnStatus.bestRun) {
                     earnStatus.bestRun = run;
                     
@@ -119,8 +115,7 @@ float const goldMultiplier = 1.10;
     return earnStatuses;
 }
 
-- (Badge *)bestBadgeForDistance:(float)distance
-{
+- (Badge *)bestBadgeForDistance:(float)distance {
     Badge *bestBadge = self.badges.firstObject;
     for (Badge *badge in self.badges) {
         if (distance < badge.distance) {
@@ -131,8 +126,7 @@ float const goldMultiplier = 1.10;
     return bestBadge;
 }
 
-- (Badge *)nextBadgeForDistance:(float)distance
-{
+- (Badge *)nextBadgeForDistance:(float)distance {
     Badge *nextBadge;
     for (Badge *badge in self.badges) {
         nextBadge = badge;
@@ -143,8 +137,7 @@ float const goldMultiplier = 1.10;
     return nextBadge;
 }
 
-- (NSArray *)annotationsForRun:(Run *)run
-{
+- (NSArray *)annotationsForRun:(Run *)run {
     NSMutableArray *annotations = [NSMutableArray array];
     
     int locationIndex = 1;

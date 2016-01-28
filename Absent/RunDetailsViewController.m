@@ -28,28 +28,25 @@ static float const mapPadding = 1.1f;
 
 #pragma mark - Lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [self configureView];
     [self loadMap];
 }
 
-#pragma mark - IBActions
 
+#pragma mark - IBActions
 - (IBAction)backToPreviousPage:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(IBAction)displayModeToggled:(UISwitch *)sender
-{
+-(IBAction)displayModeToggled:(UISwitch *)sender {
     self.badgeImageView.hidden = !sender.isOn;
     self.infoButton.hidden = !sender.isOn;
     self.mapView.hidden = sender.isOn;
 }
 
-- (IBAction)infoButtonPressed:(UIButton *)sender
-{
+- (IBAction)infoButtonPressed:(UIButton *)sender {
     Badge *badge = [[BadgeController defaultController] bestBadgeForDistance:self.run.distance.floatValue];
     
     UIAlertView *alertView = [[UIAlertView alloc]
@@ -61,10 +58,9 @@ static float const mapPadding = 1.1f;
     [alertView show];
 }
 
-#pragma mark - Private
 
-- (void)configureView
-{
+#pragma mark - Private
+- (void)configureView {
     self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -79,28 +75,27 @@ static float const mapPadding = 1.1f;
     self.badgeImageView.image = [UIImage imageNamed:badge.imageName];
 }
 
-- (void)loadMap
-{
+- (void)loadMap {
     if (self.run.locations.count > 0) {
         
         self.mapView.hidden = NO;
         
-        // set the map bounds
+        // set map bounds
         [self.mapView setRegion:[self mapRegion]];
         
-        // make the line(s!) on the map
+        // draw line on map
         [self.mapView addOverlays:self.colorSegmentArray];
         
         [self.mapView addAnnotations:[[BadgeController defaultController] annotationsForRun:self.run]];
         
     } else {
         
-        // no locations were found!
+        // no locations
         self.mapView.hidden = YES;
         
         UIAlertView *alertView = [[UIAlertView alloc]
                                   initWithTitle:@"Error"
-                                  message:@"Sorry, this run has no locations saved."
+                                  message:@"Sorry, no locations saved."
                                   delegate:self
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil];
@@ -108,10 +103,9 @@ static float const mapPadding = 1.1f;
     }
 }
 
-#pragma mark - Public
 
-- (void)setRun:(Run *)newDetailRun
-{
+#pragma mark - Public
+- (void)setRun:(Run *)newDetailRun {
     if (_run != newDetailRun) {
         _run = newDetailRun;
         
@@ -119,10 +113,9 @@ static float const mapPadding = 1.1f;
     }
 }
 
-#pragma mark - MKMapViewDelegate
 
-- (MKCoordinateRegion)mapRegion
-{
+#pragma mark - MKMapViewDelegate
+- (MKCoordinateRegion)mapRegion {
     MKCoordinateRegion region;
     Location *initialLoc = self.run.locations.firstObject;
     
@@ -155,8 +148,7 @@ static float const mapPadding = 1.1f;
     return region;
 }
 
-- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
-{
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay {
     if ([overlay isKindOfClass:[MulticolorPolylineSegment class]]) {
         MulticolorPolylineSegment *polyLine = (MulticolorPolylineSegment *)overlay;
         MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
@@ -168,8 +160,7 @@ static float const mapPadding = 1.1f;
     return nil;
 }
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation
-{
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation {
     BadgeAnnotation *badgeAnnotation = (BadgeAnnotation *)annotation;
         
     MKAnnotationView *annView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"checkpoint"];

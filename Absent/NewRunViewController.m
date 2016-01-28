@@ -76,15 +76,15 @@ static NSString * const detailSegueName = @"NewRunDetails";
     [self.timer invalidate];
 }
 
-#pragma mark - IBActions
 
+#pragma mark - IBActions
 -(IBAction)startPressed:(id)sender
 {
-    // hide the start UI
+    // hide first UI
     self.startButton.hidden = YES;
     self.promptLabel.hidden = YES;
     
-    // show the running UI
+    // show running UI
     self.timeLabel.hidden = NO;
     self.distLabel.hidden = NO;
     self.paceLabel.hidden = NO;
@@ -96,7 +96,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     
     self.seconds = 0;
     
-    // initialize the timer
+    // initialize timer
 	self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
     
     self.distance = 0;
@@ -105,17 +105,15 @@ static NSString * const detailSegueName = @"NewRunDetails";
     [self startLocationUpdates];
 }
 
-- (IBAction)stopPressed:(id)sender
-{
+- (IBAction)stopPressed:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Save", @"Discard", nil];
     actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
     [actionSheet showInView:self.view];
 }
 
-#pragma mark - Private
 
-- (void)saveRun
-{
+#pragma mark - Private
+- (void)saveRun {
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     
     newRun.distance = [NSNumber numberWithFloat:self.distance];
@@ -135,7 +133,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     newRun.locations = [NSOrderedSet orderedSetWithArray:locationArray];
     self.run = newRun;
     
-    // Save the context.
+    // Save context.
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
@@ -143,16 +141,14 @@ static NSString * const detailSegueName = @"NewRunDetails";
     }
 }
 
-- (void)eachSecond
-{
+- (void)eachSecond {
     self.seconds++;
     [self updateProgressImageView];
     [self maybePlaySound];
     [self updateLabels];
 }
 
-- (void)updateProgressImageView
-{
+- (void)updateProgressImageView {
     int currentPosition = self.progressImageView.frame.origin.x;
     CGRect newRect = self.progressImageView.frame;
     
@@ -171,16 +167,14 @@ static NSString * const detailSegueName = @"NewRunDetails";
     self.progressImageView.frame = newRect;
 }
 
-- (void)updateLabels
-{
+- (void)updateLabels {
     self.timeLabel.text = [NSString stringWithFormat:@"Time: %@",  [MathController stringifySecondCount:self.seconds usingLongFormat:NO]];
     self.distLabel.text = [NSString stringWithFormat:@"Distance: %@", [MathController stringifyDistance:self.distance]];
     self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@",  [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
     self.nextBadgeLabel.text = [NSString stringWithFormat:@"%@ until %@!", [MathController stringifyDistance:(self.upcomingBadge.distance - self.distance)], self.upcomingBadge.name];
 }
 
-- (void) maybePlaySound
-{
+- (void) maybePlaySound {
     Badge *nextBadge = [[BadgeController defaultController] nextBadgeForDistance:self.distance];
     
     if (self.upcomingBadge
@@ -193,22 +187,19 @@ static NSString * const detailSegueName = @"NewRunDetails";
     self.nextBadgeImageView.image = [UIImage imageNamed:nextBadge.imageName];
 }
 
-- (void)playSuccessSound
-{
+- (void)playSuccessSound {
     NSString *path = [NSString stringWithFormat:@"%@%@", [[NSBundle mainBundle] resourcePath], @"/genericsuccess.wav"];
     SystemSoundID soundID;
     NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
     AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(filePath), &soundID);
     AudioServicesPlaySystemSound(soundID);
     
-    //also vibrate
+    //vibrate on
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
-- (void)startLocationUpdates
-{
-    // Create the location manager if this object does not
-    // already have one.
+- (void)startLocationUpdates {
+    // Create location manager if object not exist
     if (self.locationManager == nil) {
         self.locationManager = [[CLLocationManager alloc] init];
     }
@@ -217,8 +208,8 @@ static NSString * const detailSegueName = @"NewRunDetails";
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.activityType = CLActivityTypeFitness;
     
-    // Movement threshold for new events.
-    self.locationManager.distanceFilter = 10; // meters
+    // Movement tresshold for new events.
+    self.locationManager.distanceFilter = 10;
     
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [self.locationManager requestWhenInUseAuthorization];
@@ -226,10 +217,9 @@ static NSString * const detailSegueName = @"NewRunDetails";
     [self.locationManager startUpdatingLocation];
 }
 
-#pragma mark - UIActionSheetDelegate
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+#pragma mark - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     [self.locationManager stopUpdatingLocation];
     
     // save
@@ -243,11 +233,10 @@ static NSString * const detailSegueName = @"NewRunDetails";
     }
 }
 
-#pragma mark - CLLocationManagerDelegate
 
+#pragma mark - CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray *)locations
-{
+     didUpdateLocations:(NSArray *)locations {
     for (CLLocation *newLocation in locations) {
         
         NSDate *eventDate = newLocation.timestamp;
@@ -276,10 +265,9 @@ static NSString * const detailSegueName = @"NewRunDetails";
     }
 }
 
-#pragma mark - MKMapViewDelegate
 
-- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
-{
+#pragma mark - MKMapViewDelegate
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay {
     if ([overlay isKindOfClass:[MKPolyline class]]) {
         MKPolyline *polyLine = (MKPolyline *)overlay;
         MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
@@ -291,10 +279,9 @@ static NSString * const detailSegueName = @"NewRunDetails";
     return nil;
 }
 
-#pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:detailSegueName]) {
         [[segue destinationViewController] setRun:self.run];
     }

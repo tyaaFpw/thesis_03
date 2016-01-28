@@ -25,11 +25,9 @@
 
 #pragma mark - Lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
-    //[self setUpNavigationBar];
 }
 
 - (void)setUpNavigationBar
@@ -51,12 +49,8 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    //self.mainNav = [[MainNavC alloc]init];
-    //[self.mainNav saveContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
@@ -69,12 +63,9 @@
     self.runArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
 
-#pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    //if (self.navigationController.visibleViewController == self) {
-        //[self performSegueWithIdentifier:@"thankyou" sender:self];
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
         UIViewController *nextController = [segue destinationViewController];
         if ([nextController isKindOfClass:[NewRunViewController class]]) {
             ((NewRunViewController *) nextController).managedObjectContext = self.managedObjectContext;
@@ -83,29 +74,24 @@
         } else if ([nextController isKindOfClass:[BadgesTableViewController class]]) {
             ((BadgesTableViewController *) nextController).earnStatusArray = [[BadgeController defaultController] earnStatusesForRuns:self.runArray];
         }
-    //}
 }
 
-- (void)saveContext
-{
+- (void)saveContext {
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
 }
 
-#pragma mark - Core Data stack
 
-// Returns the managed object context for the application.
-// If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
-- (NSManagedObjectContext *)managedObjectContext
-{
+#pragma mark - Core Data stack
+// Returns the managed object context for application.
+// If context doesn't exist, create it and add application's store.
+- (NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
@@ -118,10 +104,9 @@
     return _managedObjectContext;
 }
 
-// Returns the managed object model for the application.
-// If the model doesn't already exist, it is created from the application's model.
-- (NSManagedObjectModel *)managedObjectModel
-{
+// Returns the managed object model for application.
+// If model doesn't exist, create it and add application's store.
+- (NSManagedObjectModel *)managedObjectModel {
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
@@ -130,28 +115,12 @@
     return _managedObjectModel;
 }
 
-// Returns the persistent store coordinator for the application.
-// If the coordinator doesn't already exist, it is created and the application's store added to it.
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
-{
+// Returns the persistent store coordinator for application.
+// If coordinator doesn't exist, create it and add application's store.
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
-    }
-    
-//    NSString *storePath = [[[self applicationDocumentsDirectory] path] stringByAppendingPathComponent:@"Model.sqlite"];
-//    
-//    // set up the backing store
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    // If the expected store doesn't exist, copy the default store.
-//    if (![fileManager fileExistsAtPath:storePath]) {
-//        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:@"dict" ofType:@"sqlite"];
-//        if (defaultStorePath) {
-//            [fileManager copyItemAtPath:defaultStorePath toPath:storePath error:NULL];
-//        }
-//    }
-//    
-//    NSURL *storeURL = [NSURL fileURLWithPath:storePath];
-//    
+    }    
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
     
@@ -160,7 +129,6 @@
     self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
- //       abort();
     }
     
     return _persistentStoreCoordinator;
@@ -168,9 +136,8 @@
 
 #pragma mark - Application's Documents directory
 
-// Returns the URL to the application's Documents directory.
-- (NSURL *)applicationDocumentsDirectory
-{
+// Returns URL to application's Documents directory.
+- (NSURL *)applicationDocumentsDirectory {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 

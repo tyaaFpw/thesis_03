@@ -31,8 +31,7 @@
 
 #pragma mark - Lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
