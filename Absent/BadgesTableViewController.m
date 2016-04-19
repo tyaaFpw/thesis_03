@@ -1,10 +1,3 @@
-//
-//  BadgesTableViewController.m
-//  RunMaster
-//
-//  Created by Matt Luedke on 5/22/14.
-//  Copyright (c) 2014 Matt Luedke. All rights reserved.
-//
 
 #import "BadgesTableViewController.h"
 #import "BadgeEarnStatus.h"
